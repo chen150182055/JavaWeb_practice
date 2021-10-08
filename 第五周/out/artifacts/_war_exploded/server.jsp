@@ -16,6 +16,9 @@
     String username =request.getParameter("username");
     String password =request.getParameter("password");
     if (username.equals("sa")&&password.equals("sa")){
+        //设置 系统的session的非活动时间
+        //指的是用户一段时间内不操作 页面的话 就会自动退出
+        session.setMaxInactiveInterval(10); //单位是s
         //登录成功 将用户个人的信息存到session中
         session.setAttribute("username",username);
         //重定向到新的模块的页面
