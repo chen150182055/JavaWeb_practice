@@ -1,0 +1,8 @@
+# 会话技术
+
+1. jsp九大内置对象：out,request,response,session,application,config,pageContext,page,exception
+2. (内置对象)会话session:一个会话就是在一个时间段内，一个客户与web服务器的一连串相关的交互过程
+   (浏览器访问服务器然后浏览网页的这个时就是会话)
+3. session的作用：就是用来存放会话过程中用户的通用信息
+4. 现在来说同一个时间段内访问服务器的session都是一样的sessionID相同
+5. 一般登录成功以后，服务器都会
