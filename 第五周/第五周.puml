@@ -1,0 +1,83 @@
+@startuml
+digraph G {
+# 定义全局属性
+    fontname = "Courier New"
+    fontsize = 8
+    # 从下往上
+    rankdir = BT
+# 定义节点属性
+    node [
+            shape = "record" # 矩形，默认是椭圆
+            color = "yellow" # 边框蓝色
+    ]
+
+# 定义边的属性
+    edge [
+            fontsize = 9
+    ]
+# 换行符是\l，而要新建一个新的单元格，则需要是用|。{}里面的是内容
+    Reportable [
+	    label = "{Reportable | + getSummary() : Map\<String, Integer\> | + getDetail() : Map\<String, Integer\> | + isDetailVisible() : boolean}"
+    ]
+# 特殊字符要转义
+    LineCounter [
+	    label = "{LineCounter | + count(String line) : boolean | + getType() : String}"
+    ]
+
+    CharCounter [
+	    label = "{CharCounter | + count(Character c) : boolean | + getType() : String}"
+    ]
+
+   AbstractCharCounter [
+	    label = "{AbstractCharCounter | characterMap : Map\<Character, Integer\> | + count(Character c) : boolean | + getSummary() : Map\<String, Integer\> | +getDetail() : Map\<String, Integer\> }"
+    ]
+
+   AbstractLineCounter [
+	    label = "{AbstractLineCounter |  + count(String line) : boolean | + getSummary() : Map\<String, Integer\> | +getDetail() : Map\<String, Integer\> }"
+    ]
+
+   PredicateCharacter[label = "{Predicate\<Character\> | + apply(Character c) : boolean}"]
+   PredicateString[label = "{Predicate\<String\> | + apply(String line) : boolean}"]
+
+   BlankCharCounter[label = "{BlankCharCounter | + apply(Character c) : boolean | + getType() : String | + isDetailVisible() : boolean }"]
+   ChineseCharCounter[label = "{ChineseCharCounter | - chinesePattern : Pattern | + apply(Character c) : boolean | + getType() : String | + isDetailVisible() : boolean }"]
+   LetterCharCounter[label = "{LetterCharCounter | - chinesePattern : Pattern | + apply(Character c) : boolean | + getType() : String | + isDetailVisible() : boolean }"]
+    NumberCharCounter[label = "{NumberCharCounter | + apply(Character c) : boolean | + getType() : String | + isDetailVisible() : boolean }"]
+    LineNumberCounter[label = "{LineNumberCounter | + apply(Character c) : boolean | + getType() : String | + isDetailVisible() : boolean }"]
+
+
+    parentInterface [label = "parent interface" color = "green" style=filled]
+    childInterface [label = "child interface" color = "green" style=filled]
+    abstractClass [ label = "abstract class : implement some methods using the abstract methods" color = "green" style=filled]
+    specificClass [ label = "specific class : implement all unimplemented methods" color = "green" style=filled]
+
+    LineProcessor [label = "{LineProcessor\<List\<Reportable\>\>}" ]
+    ReportableLineProcessor [ label = "{ReportableLineProcessor | + ReportableLineProcessor() | + processsLine(String line) : boolean | + getResult() : List\<Reportable\>}"]
+
+    # 定义在同一层
+    {rank = same; parentInterface; Reportable; LineProcessor}
+    {rank = same; childInterface; LineCounter; CharCounter; PredicateCharacter; PredicateString}
+    {rank = same; abstractClass; AbstractLineCounter; AbstractCharCounter;}
+    {rank = same; specificClass; LineNumberCounter; BlankCharCounter; ChineseCharCounter; LetterCharCounter; NumberCharCounter; ReportableLineProcessor}
+
+   # 箭头为空心，接口之间的继承
+   LineCounter -> Reportable[arrowhead="empty"]
+   CharCounter -> Reportable[arrowhead="empty"]
+   AbstractCharCounter -> CharCounter[arrowhead="empty"]
+   AbstractLineCounter -> LineCounter[arrowhead="empty"]
+
+   AbstractCharCounter -> PredicateCharacter[arrowhead="empty"]
+   AbstractLineCounter -> PredicateString[arrowhead="empty"]
+
+   # 实现类的UML
+   BlankCharCounter -> AbstractCharCounter[arrowhead="empty", style="dashed"]
+   ChineseCharCounter -> AbstractCharCounter[arrowhead="empty", style="dashed"]
+   LetterCharCounter -> AbstractCharCounter[arrowhead="empty", style="dashed"]
+   NumberCharCounter -> AbstractCharCounter[arrowhead="empty", style="dashed"]
+   LineNumberCounter -> AbstractLineCounter[arrowhead="empty", style="dashed"]
+
+   ReportableLineProcessor -> LineProcessor[arrowhead="empty", style="dashed"]
+
+}
+
+@enduml
