@@ -35,6 +35,7 @@
         // 输出到客户端(将Cookie响应给客户端)
         response.addCookie(nameCookie);
         response.addCookie(passwordCookie);
+        session.setAttribute("name",username);
 
         //重定向到登陆成功页面
         response.sendRedirect("success.jsp");

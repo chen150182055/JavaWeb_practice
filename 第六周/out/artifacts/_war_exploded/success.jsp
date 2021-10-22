@@ -14,5 +14,6 @@
 <%
     out.print("欢迎你!!");
 %>
+<%= session.getAttribute("name")%>
 </body>
 </html>
