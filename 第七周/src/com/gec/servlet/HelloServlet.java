@@ -6,10 +6,12 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+@WebServlet("/HelloServlet") //表示我们Servlet访问路径
 public class HelloServlet extends HttpServlet {
     @Override
     //get 请求指的是浏览器向服务器向服务器发起的默认请求 doGet()方法就是来处理浏览器的get请求的方法
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doGet(req, resp);
         //返回HTML内容的话 我们需要设置response返回的内容的类型
         resp.setContentType("text/html;charset = UTF-8");
         //我们尝试在Servlet中输出HTML内容
@@ -29,6 +31,7 @@ public class HelloServlet extends HttpServlet {
     //处理浏览器发出的post请求
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doPost(req, resp);
         doGet(req, resp);
     }
 }
