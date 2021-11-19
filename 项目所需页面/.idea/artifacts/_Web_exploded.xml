@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="项目所需页面:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="项目所需页面/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="项目所需页面" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../项目所需要的jar包/jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../项目所需要的jar包/standard.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../项目所需要的jar包/c3p0-0.9.1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../项目所需要的jar包/commons-dbutils-1.4.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/../项目所需要的jar包/mysql-connector-java-5.1.39-bin.jar" />
+          <element id="library" level="project" name="lib" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
