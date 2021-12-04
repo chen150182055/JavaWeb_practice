@@ -5,10 +5,9 @@ import com.gec.entity.User;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import javax.jws.soap.SOAPBinding;
-import java.net.ConnectException;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
