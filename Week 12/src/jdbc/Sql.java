@@ -7,10 +7,10 @@ import java.sql.Statement;
 
 public class Sql {
     //"jdbc:mysql://localhost:3306/访问的数据库名称?characterEncoding=utf-8"数据库的访问地址
-    static final  String URL = "jdbc:mysql://localhost:3306/shopdb?characterEncoding=utf-8";
+    static final  String URL = "jdbc:mysql://localhost:3306/shopdb?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8";
     static final String USERNAME = "root";
     static final String PASSWORD = "5201314";
-    static final String DRIVER = "com.mysql.jdbc.Driver"; //数据库驱动名称
+    static final String DRIVER = "com.mysql.cj.jdbc.Driver"; //数据库驱动名称
 
     public static void main(String[] args) throws Exception {
         //使用反射技术加载数据库连接驱动
