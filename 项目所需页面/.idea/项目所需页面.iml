@@ -9,6 +9,7 @@
         <webroots>
           <root url="file://$MODULE_DIR$" relative="/" />
         </webroots>
+        <sourceRoots />
       </configuration>
     </facet>
   </component>
@@ -22,7 +23,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../mysql-connector-java-8.0.27/mysql-connector-java-8.0.27.jar!/" />
+          <root url="jar://$USER_HOME$/下载/mysql-connector-java-8.0.27/mysql-connector-java-8.0.27.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

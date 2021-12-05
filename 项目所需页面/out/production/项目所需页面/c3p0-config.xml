@@ -1,33 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <c3p0-config>
 	<default-config>
-	     <!--数据库连接url  -->
-		<property name="jdbcUrl">jdbc:mysql://localhost:3306/shopdb?useSSL=false&amp;serverTimezone=UTC</property>
-		<!--驱动路径  -->
 		<property name="driverClass">com.mysql.cj.jdbc.Driver</property>
-		<!-- 用户名 -->
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/shopdb?serverTimezone=GMT&amp;useSSL=true</property>
 		<property name="user">root</property>
-		<!--密码  -->
 		<property name="password">5201314</property>
-
-		<property name="acquireIncrement">5</property>
-		<!--初始化连接池的连接对象个数  -->
-		<property name="initialPoolSize ">10</property>
-		<!--最小连接数  -->
-		<property name="minPoolSize ">2</property>
-		<!--最大连接数  -->
-		<property name="maxPoolSize ">10</property>
+		<property name="acquireIncrement">3</property>
+		<property name="initialPoolSize">10</property>
+		<property name="minPoolSize">5</property>
+		<property name="maxPoolSize">20</property> <!-- intergalactoApp adopts a different approach to configuring statement
+			caching -->
+		<property name="maxStatements">0</property>
+		<property name="maxStatementsPerConnection">5</property> <!-- he's important, but there's only one of him -->
 	</default-config>
 
-	<named-config name="test">
-		<property name="jdbcUrl">jdbc:mysql://localhost:3306/shopdb?useSSL=false&amp;serverTimezone=UTC</property>
-		<property name="driverClass">com.mysql.jdbc.cj.Driver</property>
+	<named-config name="mysql">
+		<property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/shopdb?serverTimezone=GMT&amp;useSSL=true</property>
 		<property name="user">root</property>
 		<property name="password">5201314</property>
-		<property name="acquireIncrement">5</property>
-		<property name="initialPoolSize">10</property>
-		<property name="minPoolSize">2</property>
-		<property name="maxPoolSize">10</property>
-	</named-config>
 
+		<property name="acquireIncrement">3</property>
+		<property name="initialPoolSize">10</property>
+		<property name="minPoolSize">5</property>
+		<property name="maxPoolSize">20</property> <!-- intergalactoApp adopts a different approach to configuring statement
+			caching -->
+		<property name="maxStatements">0</property>
+		<property name="maxStatementsPerConnection">5</property> <!-- he's important, but there's only one of him -->
+	</named-config>
 </c3p0-config>
