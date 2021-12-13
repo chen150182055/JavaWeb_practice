@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<web-app>
   <display-name>Shop</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -13,7 +13,7 @@
     <description></description>
     <display-name>ProductListServlet</display-name>
     <servlet-name>ProductListServlet</servlet-name>
-    <servlet-class>com.shop.web.ProductListServlet</servlet-class>
+    <servlet-class>com.gec.servlet.ProductListServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ProductListServlet</servlet-name>
@@ -23,7 +23,7 @@
     <description></description>
     <display-name>IndexServlet</display-name>
     <servlet-name>IndexServlet</servlet-name>
-    <servlet-class>com.shop.web.IndexServlet</servlet-class>
+    <servlet-class>com.gec.servlet.IndexServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>IndexServlet</servlet-name>
@@ -43,7 +43,7 @@
     <description></description>
     <display-name>ZhuxiaoServlet</display-name>
     <servlet-name>ZhuxiaoServlet</servlet-name>
-    <servlet-class>com.shop.web.ZhuxiaoServlet</servlet-class>
+    <servlet-class>com.gec.servlet.ZhuxiaoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ZhuxiaoServlet</servlet-name>
@@ -53,7 +53,7 @@
     <description></description>
     <display-name>RegisterServlet</display-name>
     <servlet-name>RegisterServlet</servlet-name>
-    <servlet-class>com.shop.web.RegisterServlet</servlet-class>
+    <servlet-class>com.gec.servlet.RegisterServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>RegisterServlet</servlet-name>
@@ -63,7 +63,7 @@
     <description></description>
     <display-name>ProductInfoServlet</display-name>
     <servlet-name>ProductInfoServlet</servlet-name>
-    <servlet-class>com.shop.web.ProductInfoServlet</servlet-class>
+    <servlet-class>com.gec.servlet.ProductInfoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ProductInfoServlet</servlet-name>
@@ -73,7 +73,7 @@
     <description></description>
     <display-name>AddCartServlet</display-name>
     <servlet-name>AddCartServlet</servlet-name>
-    <servlet-class>com.shop.web.AddCartServlet</servlet-class>
+    <servlet-class>com.gec.servlet.AddCartServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AddCartServlet</servlet-name>
@@ -83,7 +83,7 @@
     <description></description>
     <display-name>DeleteCartItemServlet</display-name>
     <servlet-name>DeleteCartItemServlet</servlet-name>
-    <servlet-class>com.shop.web.DeleteCartItemServlet</servlet-class>
+    <servlet-class>com.gec.servlet.DeleteCartItemServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DeleteCartItemServlet</servlet-name>
@@ -93,7 +93,7 @@
     <description></description>
     <display-name>CleanCartServlet</display-name>
     <servlet-name>CleanCartServlet</servlet-name>
-    <servlet-class>com.shop.web.CleanCartServlet</servlet-class>
+    <servlet-class>com.gec.servlet.CleanCartServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CleanCartServlet</servlet-name>
@@ -103,7 +103,7 @@
     <description></description>
     <display-name>UpdateBuyNumServlet</display-name>
     <servlet-name>UpdateBuyNumServlet</servlet-name>
-    <servlet-class>com.shop.web.UpdateBuyNumServlet</servlet-class>
+    <servlet-class>com.gec.servlet.UpdateBuyNumServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>UpdateBuyNumServlet</servlet-name>
@@ -113,7 +113,7 @@
     <description></description>
     <display-name>SubmitOrderServlet</display-name>
     <servlet-name>SubmitOrderServlet</servlet-name>
-    <servlet-class>com.shop.web.SubmitOrderServlet</servlet-class>
+    <servlet-class>com.gec.servlet.SubmitOrderServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SubmitOrderServlet</servlet-name>
@@ -123,7 +123,7 @@
     <description></description>
     <display-name>OrderListServlet</display-name>
     <servlet-name>OrderListServlet</servlet-name>
-    <servlet-class>com.shop.web.OrderListServlet</servlet-class>
+    <servlet-class>com.gec.servlet.OrderListServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>OrderListServlet</servlet-name>
@@ -133,7 +133,7 @@
     <description></description>
     <display-name>ManageOrderServlet</display-name>
     <servlet-name>ManageOrderServlet</servlet-name>
-    <servlet-class>com.shop.web.ManageOrderServlet</servlet-class>
+    <servlet-class>com.gec.servlet.ManageOrderServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ManageOrderServlet</servlet-name>
@@ -143,7 +143,7 @@
     <description></description>
     <display-name>QueDingOrderServlet</display-name>
     <servlet-name>QueDingOrderServlet</servlet-name>
-    <servlet-class>com.shop.web.QueDingOrderServlet</servlet-class>
+    <servlet-class>com.gec.servlet.QueDingOrderServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>QueDingOrderServlet</servlet-name>
@@ -153,7 +153,7 @@
     <description></description>
     <display-name>AccountServlet</display-name>
     <servlet-name>AccountServlet</servlet-name>
-    <servlet-class>com.shop.web.AccountServlet</servlet-class>
+    <servlet-class>com.gec.servlet.AccountServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AccountServlet</servlet-name>
@@ -163,7 +163,7 @@
     <description></description>
     <display-name>DeleteOrderServlet</display-name>
     <servlet-name>DeleteOrderServlet</servlet-name>
-    <servlet-class>com.shop.web.DeleteOrderServlet</servlet-class>
+    <servlet-class>com.gec.servlet.DeleteOrderServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DeleteOrderServlet</servlet-name>
@@ -173,7 +173,7 @@
     <description></description>
     <display-name>AssessOrderServlet</display-name>
     <servlet-name>AssessOrderServlet</servlet-name>
-    <servlet-class>com.shop.web.AssessOrderServlet</servlet-class>
+    <servlet-class>com.gec.servlet.AssessOrderServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AssessOrderServlet</servlet-name>
@@ -183,7 +183,7 @@
     <description></description>
     <display-name>UpdateUserInfoServlet</display-name>
     <servlet-name>UpdateUserInfoServlet</servlet-name>
-    <servlet-class>com.shop.web.UpdateUserInfoServlet</servlet-class>
+    <servlet-class>com.gec.servlet.UpdateUserInfoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>UpdateUserInfoServlet</servlet-name>
@@ -193,7 +193,7 @@
     <description></description>
     <display-name>SearchProductServlet</display-name>
     <servlet-name>SearchProductServlet</servlet-name>
-    <servlet-class>com.shop.web.SearchProductServlet</servlet-class>
+    <servlet-class>com.gec.servlet.SearchProductServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SearchProductServlet</servlet-name>
@@ -203,7 +203,7 @@
     <description></description>
     <display-name>CategoryListServlet</display-name>
     <servlet-name>CategoryListServlet</servlet-name>
-    <servlet-class>com.shop.web.CategoryListServlet</servlet-class>
+    <servlet-class>com.gec.servlet.CategoryListServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CategoryListServlet</servlet-name>
@@ -213,7 +213,7 @@
     <description></description>
     <display-name>EditCategoryServlet</display-name>
     <servlet-name>EditCategoryServlet</servlet-name>
-    <servlet-class>com.shop.web.EditCategoryServlet</servlet-class>
+    <servlet-class>com.gec.servlet.EditCategoryServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>EditCategoryServlet</servlet-name>
@@ -223,7 +223,7 @@
     <description></description>
     <display-name>UpdateCategoryServlet</display-name>
     <servlet-name>UpdateCategoryServlet</servlet-name>
-    <servlet-class>com.shop.web.UpdateCategoryServlet</servlet-class>
+    <servlet-class>com.gec.servlet.UpdateCategoryServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>UpdateCategoryServlet</servlet-name>
@@ -233,7 +233,7 @@
     <description></description>
     <display-name>DeleteCategoryServlet</display-name>
     <servlet-name>DeleteCategoryServlet</servlet-name>
-    <servlet-class>com.shop.web.DeleteCategoryServlet</servlet-class>
+    <servlet-class>com.gec.servlet.DeleteCategoryServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DeleteCategoryServlet</servlet-name>
@@ -243,7 +243,7 @@
     <description></description>
     <display-name>AddCategoryServlet</display-name>
     <servlet-name>AddCategoryServlet</servlet-name>
-    <servlet-class>com.shop.web.AddCategoryServlet</servlet-class>
+    <servlet-class>com.gec.servlet.AddCategoryServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AddCategoryServlet</servlet-name>
@@ -253,7 +253,7 @@
     <description></description>
     <display-name>EditProductServlet</display-name>
     <servlet-name>EditProductServlet</servlet-name>
-    <servlet-class>com.shop.web.EditProductServlet</servlet-class>
+    <servlet-class>com.gec.servlet.EditProductServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>EditProductServlet</servlet-name>
@@ -263,7 +263,7 @@
     <description></description>
     <display-name>AddProductServlet</display-name>
     <servlet-name>AddProductServlet</servlet-name>
-    <servlet-class>com.shop.web.AddProductServlet</servlet-class>
+    <servlet-class>com.gec.servlet.AddProductServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AddProductServlet</servlet-name>
@@ -273,7 +273,7 @@
     <description></description>
     <display-name>DeleteProductServlet</display-name>
     <servlet-name>DeleteProductServlet</servlet-name>
-    <servlet-class>com.shop.web.DeleteProductServlet</servlet-class>
+    <servlet-class>com.gec.servlet.DeleteProductServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DeleteProductServlet</servlet-name>
@@ -283,7 +283,7 @@
     <description></description>
     <display-name>AllOrderListServlet</display-name>
     <servlet-name>AllOrderListServlet</servlet-name>
-    <servlet-class>com.shop.web.AllOrderListServlet</servlet-class>
+    <servlet-class>com.gec.servlet.AllOrderListServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AllOrderListServlet</servlet-name>
@@ -293,7 +293,7 @@
     <description></description>
     <display-name>OrderInfoServlet</display-name>
     <servlet-name>OrderInfoServlet</servlet-name>
-    <servlet-class>com.shop.web.OrderInfoServlet</servlet-class>
+    <servlet-class>com.gec.servlet.OrderInfoServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>OrderInfoServlet</servlet-name>

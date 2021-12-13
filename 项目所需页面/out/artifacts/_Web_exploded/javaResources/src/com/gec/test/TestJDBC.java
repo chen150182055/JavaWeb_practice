@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class TestJDBC {
-    static final String URL = "jdbc:mysql://localhost:3306/shopdb?useSSL=true&characterEncoding=utf-8";
+    static final String URL = "jdbc:mysql://localhost:3306/shopdb?useSSL=false&characterEncoding=utf-8";
     static final String USERNAME = "root";
     static final String PASSWORD = "5201314";
     static final String DRIVER = "com.mysql.jdbc.Driver";
