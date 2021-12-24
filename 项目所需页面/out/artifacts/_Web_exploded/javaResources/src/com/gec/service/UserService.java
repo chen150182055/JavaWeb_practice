@@ -6,8 +6,9 @@ import com.gec.entity.User;
 public class UserService {
     UserDao userDao = new UserDao();
 
-    public User login(String username, String password) {
+    public User login(String username, String password) {   //用户登录方法
         try {
+            //创建一个User对象调用findUserByUsernameAndPassword（通过用户名和密码）
             User user=userDao.findUserByUsernameAndPassword(username, password);
             return user;
         } catch (Exception e) {

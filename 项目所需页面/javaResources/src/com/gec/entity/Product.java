@@ -1,5 +1,6 @@
 package com.gec.entity;
 
+//商品类
 public class Product {
 	//商品id
 	private String pid;

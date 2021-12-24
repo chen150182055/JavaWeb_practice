@@ -1,5 +1,6 @@
 package com.gec.entity;
 
+//订单类
 public class OrderItem {
 	//id
 	private String itemId;
