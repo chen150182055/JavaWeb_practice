@@ -12,7 +12,7 @@
     </div>
     <div class="col-md-3" style="padding-top:20px">
         <ol class="list-inline">
-            <c:if test="${empty user}">
+            <c:if test="${empty user}">      <!--  -->
                 <li><a href="login.jsp">登录</a></li>
                 <li><a href="register.jsp">注册</a></li>
             </c:if>

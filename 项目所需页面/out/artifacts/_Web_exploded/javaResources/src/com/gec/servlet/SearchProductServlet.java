@@ -10,9 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchProductServlet extends HttpServlet {
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String search=request.getParameter("search");
         String s=request.getParameter("currentPage");
+        System.out.println("search"+search+"currentPage" );
         int currentPage=Integer.parseInt(s);
 
 

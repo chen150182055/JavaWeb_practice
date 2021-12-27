@@ -7,8 +7,8 @@ import java.io.IOException;
 public class ZhuxiaoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.getSession().removeAttribute("user");
-        response.sendRedirect("login.jsp");
+        request.getSession().removeAttribute("user");    //从当前session中删除指定名称的属性对象
+        response.sendRedirect("login.jsp");         //重定向到login.jsp
     }
 
     @Override

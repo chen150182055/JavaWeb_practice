@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Set;
 
+//添加到购物车
 public class AddCartServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;

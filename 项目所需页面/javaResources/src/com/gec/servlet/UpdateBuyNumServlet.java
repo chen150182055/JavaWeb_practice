@@ -8,6 +8,7 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.Map;
 
+//修改购物车的商品购买数量
 public class UpdateBuyNumServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

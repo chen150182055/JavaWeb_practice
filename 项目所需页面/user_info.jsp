@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+                    <label for="Password" class="col-sm-2 control-label">密码</label>
                     <div class="col-sm-6">
                         <input type="password" class="form-control" id="Password"
                                placeholder="请输入密码" name="password" value="${user.password}">
@@ -104,7 +104,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">手机号码</label>
+                    <label for="inputEmail4" class="col-sm-2 control-label">手机号码</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" id="inputEmail4"
                                placeholder="请输入手机号码" name="telephone" value="${user.telephone}">
@@ -113,13 +113,9 @@
                 <div class="form-group opt">
                     <label for="inlineRadio1" class="col-sm-2 control-label">性别</label>
                     <div class="col-sm-6">
-                        <label class="radio-inline"> <input type="radio"
-                                                            name="sex" id="inlineRadio1" value="男"
+                        <label class="radio-inline"> <input type="radio" name="sex" id="inlineRadio1" value="男"
                                                             <c:if test="${user.sex=='男'}">checked="checked"</c:if>
-                        >
-                            男
-                        </label> <label class="radio-inline"> <input type="radio"
-                                                                     name="sex" id="inlineRadio2" value="女"
+                        >男</label> <label class="radio-inline"> <input type="radio" name="sex" id="inlineRadio2" value="女"
                                                                      <c:if test="${user.sex=='女'}">checked="checked"</c:if>>
                         女
                     </label>
@@ -128,11 +124,11 @@
                 <div class="form-group">
                     <label for="date" class="col-sm-2 control-label">出生日期</label>
                     <div class="col-sm-6">
-                        <input type="date" class="form-control" name="birthday" value="${user.birthday}">
+                        <input type="date" class="form-control" id="date" name="birthday" value="${user.birthday}">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">地址</label>
+                    <label for="inputAddress6" class="col-sm-2 control-label">地址</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" id="inputAddress6"
                                placeholder="请输入常用收货地址" name="address" value="${user.address}">
@@ -141,8 +137,7 @@
 
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <input type="submit" width="100" value="修改" name="submit" id="submit"
-                               style="background: url('./images/register.gif') no-repeat scroll 0 0 rgba(0, 0, 0, 0); height: 35px; width: 100px; color: white;">
+                        <input type="submit" width="100" value="修改" name="submit" id="submit" style="background: url('./images/register.gif') no-repeat scroll 0 0 rgba(0, 0, 0, 0); height: 35px; width: 100px; color: white;">
                         <input class="button_ok" type="button" onclick="history.go(-1)" value="返回"/></div>
                 </div>
             </form>

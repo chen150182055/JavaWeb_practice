@@ -16,24 +16,24 @@ public class LoginServlet extends HttpServlet {
 
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-        User user = userService.login(username,password);
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { //处理POST类型的请求
+        String username = req.getParameter("username");   //获取名为username的参数值(用户名)
+        String password = req.getParameter("password");   //获取名为password的参数值(密码)
+        User user = userService.login(username,password);   //调用dao层的login方法从而实现数据库查找用户
 
-        if (user!=null)
+        if (user!=null)                 //如果user对象不为空 即能够成功查找到对象
         {
-            HttpSession session = req.getSession();
-            session.setAttribute("user",user);
-            resp.sendRedirect("index.jsp");
+            HttpSession session = req.getSession();         //获取一个session对象
+            session.setAttribute("user",user);           //将user对象(用户),与user关联后存储到当前的session对象中
+            resp.sendRedirect("index.jsp");              //重定向到index.jsp
         }else {
-            req.setAttribute("error","密码错误");
-            req.getRequestDispatcher("login.jsp").forward(req,resp);
+            req.setAttribute("error","密码错误");       //密码错误
+            req.getRequestDispatcher("login.jsp").forward(req,resp);    //返回封装了login.jsp所指定资源的requestDispatcher对象()
         }
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {   //处理GET类型的请求
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 

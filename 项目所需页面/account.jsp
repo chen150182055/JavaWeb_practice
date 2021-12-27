@@ -23,11 +23,9 @@
         }
     </style>
 </head>
-
 <body>
 <!-- 引入header.jsp -->
 <jsp:include page="/header.jsp"></jsp:include>
-
 <div class="container">
     <div class="row">
         <div style="margin: 0 auto; margin-top: 10px; width: 950px;">
@@ -58,29 +56,23 @@
                 </tbody>
             </table>
         </div>
-
         <div style="text-align: right; margin-right: 120px;">
             商品金额: <strong style="color: #ff6600;">￥${order.total}</strong>
         </div>
-
     </div>
-
     <div style="width:100%;text-align:center">
         <div><label>地&nbsp;&nbsp;&nbsp;址</label>
             <input type="text" disabled="disabled"
                    placeholder="请输入收货地址" value="${order.address}">
         </div>
-
         <div><label>收货人</label>
             <input type="text" disabled="disabled"
                    placeholder="请输收货人" value="${order.name}">
         </div>
-
         <div><label>电&nbsp;&nbsp;&nbsp;话</label>
             <input type="text" disabled="disabled"
                    placeholder="请输入联系方式" value="${order.telephone}">
         </div>
-
         <hr/>
         <form action="AccountServlet" style="margin-top: 5px;text-align:center">
             <input type="hidden" name="oid" value="${order.oid}">
@@ -93,25 +85,14 @@
                         <font style="color:red;">${error}</font>
                     </c:if>
                 </div>
-
-
             </div>
             <input type="submit" value="付款">
             <input class="button_ok" type="button" onclick="history.go(-1)" value="返回"/>
-
-
         </form>
-
         <hr/>
-
-
     </div>
-
 </div>
-
 <!-- 引入footer.jsp -->
 <jsp:include page="/footer.jsp"></jsp:include>
-
 </body>
-
 </html>
