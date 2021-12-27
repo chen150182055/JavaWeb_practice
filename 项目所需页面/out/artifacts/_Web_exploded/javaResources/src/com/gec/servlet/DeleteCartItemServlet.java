@@ -11,7 +11,7 @@ import java.util.Map;
 public class DeleteCartItemServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-
+        //
         String pid = request.getParameter("pid");
         HttpSession session = request.getSession();
         Cart cart = (Cart) session.getAttribute("cart");

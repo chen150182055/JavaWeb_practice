@@ -54,13 +54,14 @@ public class OrderDao {
         return order;  //返回该order对象
     }
 
+    //向订单表中添加一条信息
     public int addOrder(Order order){
         QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
         //创建一个字符串用来存放sql语句 插入Orders表中
-        String sql="insert into orders values(?,now(),?,?,?,?,?,?,null)";
-        //创建一个字符串数组 用来存放等下即将用来替换的参数
+        String sql="insert into orders values(?,now(),?,?,?,?,?,?,null)";    //9个参数  需要九个数据
+        //创建一个字符串数组 用来存放等下即将用来替换的参数  将订单中的数据取出来 作为sql语句占位符中的参数
         String[] arr={order.getOid(),String.valueOf(order.getTotal()),String.valueOf(order.getState()),
-                order.getAddress(),order.getName(),order.getTelephone(),order.getUid()};
+                order.getAddress(),order.getName(),order.getTelephone(),order.getUid()};   //
         int n=0;
         try {
             //执行更新语句 arr字符串为需要替换的参数

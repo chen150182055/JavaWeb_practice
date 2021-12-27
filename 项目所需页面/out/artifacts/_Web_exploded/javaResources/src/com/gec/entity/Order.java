@@ -92,6 +92,7 @@ public class Order {
         this.uid = uid;
     }
 
+    //购买
     public List<OrderItem> getOrderItems() {
         return orderItems;
     }
