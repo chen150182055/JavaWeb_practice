@@ -13,15 +13,17 @@ public class QueDingOrderServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        String oid = request.getParameter("oid");
-        String address = request.getParameter("address");
-        String name = request.getParameter("name");
-        String telephone = request.getParameter("telephone");
+        String oid = request.getParameter("oid");      //获取oid
+        String address = request.getParameter("address");  //获取address
+        String name = request.getParameter("name");     //获取name
+        String telephone = request.getParameter("telephone");  //获取telephone
 
-        OrderDao orderDao = new OrderDao();
-        OrderItemDao orderItemDao = new OrderItemDao();
+        System.out.println(address);   //打印一下address
 
-        User user = (User) session.getAttribute("user");
+        OrderDao orderDao = new OrderDao();   //调用dao层操作数据库
+        OrderItemDao orderItemDao = new OrderItemDao();    //调用dao层操作数据库
+
+        User user = (User) session.getAttribute("user");   //将session中名为user的值保存为User对象
 
         Order order = new Order();
         order.setOid(oid);
