@@ -87,4 +87,27 @@ public class UserDao {
         }
         return row;
     }
+
+    /**
+     * 用户信息修改(dao层，更新用户信息)
+     *
+     * @param user
+     * @return
+     */
+    public int updateUserInfo(User user) {
+        QueryRunner queryRunner = new QueryRunner(C3P0Utils.getDataSource());
+        String sql="update user set password=?,name=?,sex=?,address=?,"
+                + "email=?,telephone=?,birthday=? where uid=?";
+        String[] arr={user.getPassword(),user.getName(),user.getSex(),
+                user.getAddress(),user.getEmail(),user.getTelephone(),
+                user.getBirthday(),user.getUid()};
+        int n=0;
+        try {
+            n = queryRunner.update(sql,arr);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return n;
+    }
 }

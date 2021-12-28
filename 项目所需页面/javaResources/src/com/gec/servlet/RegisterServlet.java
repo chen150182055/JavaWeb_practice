@@ -22,6 +22,7 @@ public class RegisterServlet extends HttpServlet {
         String sex = request.getParameter("sex");
         String birthday = request.getParameter("birthday");
         String address = request.getParameter("address");
+        System.out.println(address);
 
         // 判断一下这个账号是否存在
         UserDao userDao = new UserDao();
