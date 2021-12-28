@@ -118,7 +118,7 @@
     <div style="clear: both;"></div>
     <div style="overflow: hidden;">
         <ul style="list-style: none;">
-            <li style="width: 150px; height: 216; float: left; margin: 0 8px 0 0; padding: 0 18px 15px; text-align: center;">
+            <li style="width: 150px; height: 216px; float: left; margin: 0 8px 0 0; padding: 0 18px 15px; text-align: center;">
                 <img src="products/1/cs10001.jpg" width="130px" height="130px"/></li>
         </ul>
     </div>
