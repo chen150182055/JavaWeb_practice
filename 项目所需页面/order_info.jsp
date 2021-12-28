@@ -46,9 +46,9 @@
                 </tr>
                 <c:forEach items="${order.orderItems}" var="orderItem">
                     <tr class="active">
-                        <td width="60" width="40%"><input type="hidden" name="id"
-                                                          value="22"> <img src="${orderItem.product.pimage }" width="70"
-                                                                           height="60"></td>
+                        <td width="60" width="40%"><input type="hidden" name="id" value="22">
+                            <img src="${orderItem.product.pimage }" width="70" height="60">
+                        </td>
                         <td width="30%"><a target="_blank"> ${orderItem.product.pname }</a></td>
                         <td width="20%">￥${orderItem.product.shop_price }</td>
                         <td width="10%">${orderItem.count }</td>
@@ -58,13 +58,9 @@
                 </tbody>
             </table>
         </div>
-
-        <div style="text-align: right; margin-right: 120px;">
-            商品金额: <strong style="color: #ff6600;">￥${order.total}</strong>
+        <div style="text-align: right; margin-right: 120px;">商品金额: <strong style="color: #ff6600;">￥${order.total}</strong>
         </div>
-
     </div>
-
     <div>
         <hr/>
         <form class="form-horizontal" action="QueDingOrderServlet"
@@ -73,42 +69,30 @@
             <div class="form-group">
                 <label for="username" class="col-sm-1 control-label">地&nbsp;&nbsp;&nbsp;址</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="address"
-                           placeholder="请输入收货地址" value="${order.address}">
+                    <input type="text" class="form-control" name="address" placeholder="请输入收货地址" value="${order.address}">
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputPassword3" class="col-sm-1 control-label">收货人</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="name"
-                           placeholder="请输收货人" value="${order.name}">
+                    <input type="text" class="form-control" name="name" placeholder="请输收货人" value="${order.name}">
                 </div>
             </div>
             <div class="form-group">
                 <label for="confirmpwd" class="col-sm-1 control-label">电&nbsp;&nbsp;&nbsp;话</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="telephone"
-                           placeholder="请输入联系方式" value="${order.telephone}">
+                    <input type="text" class="form-control" name="telephone" placeholder="请输入联系方式" value="${order.telephone}">
                 </div>
             </div>
             <input type="submit" value="确定订单" style="margin-left:150px">
             &nbsp;&nbsp;&nbsp;<a href="DeleteOrderServlet?oid=${order.oid}">删除订单</a>
 
             &nbsp;&nbsp;&nbsp;<input class="button_ok" type="button" onclick="history.go(-1)" value="返回"/>
-
-
         </form>
-
         <hr/>
-
-
     </div>
-
 </div>
-
 <!-- 引入footer.jsp -->
 <jsp:include page="/footer.jsp"></jsp:include>
-
 </body>
-
 </html>
