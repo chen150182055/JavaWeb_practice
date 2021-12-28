@@ -117,6 +117,11 @@ public class OrderDao {
         return n;
     }
 
+    /**
+     *
+     * @param uid
+     * @return
+     */
     public List<Order> getOrderListByUid(String uid) {
         QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
         List<Order> list=null;
@@ -127,6 +132,43 @@ public class OrderDao {
             e.printStackTrace();
         }
         return list;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public List<Order> getAllOrderList() {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql="select * from Orders order by orderTime desc";
+        List<Order> list=null;
+        try {
+            list = qr.query(sql, new BeanListHandler<Order>(Order.class));
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+    /**
+     *
+     * @param oid
+     * @param assess
+     * @return
+     */
+    public int assessOrder(String oid, String assess) {
+        QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
+        String sql = "update orders set assess =? where oid =?";
+        int n=0;
+        try {
+            n=qr.update(sql,assess,oid);
+        } catch (Exception e) {
+            // TODO: handle exception
+            e.printStackTrace();
+        }
+
+        return n;
     }
 
 }

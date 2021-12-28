@@ -18,9 +18,7 @@
 </HEAD>
 <body>
 	<br>
-	<form id="Form1" name="Form1" style="width:95%;margin:0 auto;"
-		action="${pageContext.request.contextPath}/user/list.jsp"
-		method="post">
+	<form id="Form1" name="Form1" style="width:95%;margin:0 auto;" action="${pageContext.request.contextPath}/user/list.jsp" method="post">
 		<table class="table table-bordered">
 					<c:forEach items="${orderList}" var="order">
 					<tbody style="text-align:center;">

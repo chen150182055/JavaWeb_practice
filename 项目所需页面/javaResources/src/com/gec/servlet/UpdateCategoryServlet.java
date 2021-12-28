@@ -14,8 +14,6 @@ public class UpdateCategoryServlet extends HttpServlet {
         CategoryDao categoryDao=new CategoryDao();
         categoryDao.updateCategory(cid,cname);
         response.sendRedirect("CategoryListServlet");
-
-
         System.out.print(cid);
         System.out.print(cname);
     }

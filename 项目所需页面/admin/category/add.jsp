@@ -15,7 +15,8 @@
         <tr>
             <td class="ta_01" align="center" bgColor="#afd1f3" colSpan="4"
                 height="26">
-                <strong><STRONG>添加分类</STRONG>
+                <strong>
+                    <STRONG>添加分类</STRONG>
                 </strong>
             </td>
         </tr>

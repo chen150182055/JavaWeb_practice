@@ -34,6 +34,25 @@ public class ProductService {
 
     /**
      *
+     * @return
+     */
+    public List<Product> getProductList() {
+        // TODO Auto-generated method stub
+        return productDao.getProductList();
+    }
+
+    /**
+     *
+     * @param cid
+     * @return
+     */
+    public List<Product> getProductListByCid(String cid){
+        return productDao.getProductListByCid(cid);
+
+    }
+
+    /**
+     *
      * @param pid
      * @return
      */

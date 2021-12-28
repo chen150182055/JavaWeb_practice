@@ -3,6 +3,7 @@ package com.gec.dao;
 import com.gec.entity.Category;
 import com.gec.test.C3P0Utils;
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import java.sql.SQLException;
@@ -48,6 +49,95 @@ public class CategoryDao {
             e.printStackTrace();
         }
         return list;
+    }
+
+    /**
+     *
+     * @param category
+     * @return
+     */
+    public int addCategory(Category category){
+        String sql="insert into category values (?,?)";
+        String[] arr={category.getCid(),category.getCname()};
+        int row=0;
+        try {
+            row= qr.update(sql,arr);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return row;
+    }
+
+    /**
+     *
+     * @param cid
+     * @return
+     */
+    public Category getCategoryByCid(String cid) {
+        String sql = "select * from category where cid=?";
+        Category category = null;
+        try {
+            category = qr.query(sql, new BeanHandler<Category>(Category.class), cid);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return category;
+    }
+
+    /**
+     *
+     * @param cid
+     * @param cname
+     * @return
+     */
+    public int updateCategory(String cid,String cname) {
+        String sql="update category set cname=? where cid=?";
+        int n=0;
+        try {
+            n = qr.update(sql,cname,cid);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return n;
+    }
+
+    /**
+     *
+     * @param cid
+     * @return
+     */
+    public int deleteCategoryByCid(String cid) {
+        String sql="delete from category where cid=?";
+        int n=0;
+        try {
+            n = qr.update(sql,cid);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return n;
+    }
+
+    /**
+     *
+     * @param cid
+     * @param cname
+     * @return
+     */
+    public int updateCategoryByCid(String cid, String cname) {
+        String sql="update category set cname=? where cid=?";
+        int n=0;
+        try {
+            n = qr.update(sql,cname,cid);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        return n;
     }
 
 }

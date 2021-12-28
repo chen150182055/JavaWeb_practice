@@ -8,6 +8,7 @@ import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductDao {
@@ -115,6 +116,27 @@ public class ProductDao {
     }
 
     /**
+     *
+     * @param product
+     * @return
+     */
+    public int updateProduct(Product product) {
+        String sql="update product set pname=?,is_hot=?,market_price=?,"
+                + "shop_price=?,cid=?,pdesc=? where pid=?";
+        Object[] arr={product.getPname(),product.getIs_hot(),product.getMarket_price(),
+                product.getShop_price(),product.getCid(),product.getPdesc(),
+                product.getPid()};
+        int n=0;
+        try {
+            n = qr.update(sql,arr);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return n;
+    }
+
+    /**
      * 分页查询商品记录
      *
      * @param currentPage
@@ -160,6 +182,48 @@ public class ProductDao {
     }
 
     /**
+     *
+     * @param product
+     * @return
+     */
+    public int addProduct(Product product) {
+        String sql="insert into product values(?,?,?,?,?,now(),?,?,0,?)";
+        Object[] arr={product.getPid(),product.getPname(),product.getMarket_price(),
+                product.getShop_price(),product.getPimage(),product.getIs_hot(),
+                product.getPdesc(),product.getCid()};
+        int n=0;
+        try {
+            n = qr.update(sql,arr);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return n;
+    }
+
+    /**
+     *
+     * @param pid
+     * @return
+     */
+    public int deleteProductByPid(String pid) {
+        //删除订单记录表中的信息前首先判断他的子表 中的有没有数据
+        ProductDao productDao= new ProductDao();
+        //先删除子表中的数据
+        Product product = productDao.getProductByPid(pid);
+
+        //再删除主表中的数据
+        String sql="delete from product where pid= ?";
+        int N=0;
+        try {
+            N = qr.update(sql,pid);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return N;
+    }
+
+    /**
      * 	模糊搜索所有商品信息
      * @param search
      * @return
@@ -174,5 +238,42 @@ public class ProductDao {
             e.printStackTrace();
         }
         return list;
+    }
+
+    /**
+     *
+     * @param cid
+     * @return
+     */
+    public List<Product> getProductListByCid(String cid) {
+        String sql="select * from Product where cid=?";
+        List<Product> list=null;
+        try {
+            list = qr.query(sql, new BeanListHandler<Product>(Product.class),cid);
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+
+        return list;
+
+    }
+
+    /**
+     *
+     * @return
+     */
+    public List<Product> getProductList() {
+        String sql="select * from Product";
+        List<Product> list=new ArrayList<Product>();
+        try {
+            list = qr.query(sql,new BeanListHandler<Product>(Product.class));
+        } catch (SQLException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return list;
+
     }
 }

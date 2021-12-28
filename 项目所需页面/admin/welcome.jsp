@@ -35,14 +35,11 @@
 
 <body>
 
-<form name="Form1" method="post" action="name.aspx" id="Form1">
-
-    <table width="100%" border="0" height="88" border="1"
-           background="${pageContext.request.contextPath}/images/back1.JPG">
+<form name="Form1" method="post" action="name.aspx" id="Form1">     <!--  -->
+    <table width="100%" border="0" height="88" border="1" background="${pageContext.request.contextPath}/images/back1.jpg">
         <tr>
             <td colspan=3 class="ta_01" align="center" bgcolor="#afd1f3"><strong>系统首页</strong></td>
         </tr>
-
         <tr>
             <td width="65%" height="84" align="center" valign="top">
                 <span class="Style1">登录成功！</span>
@@ -51,11 +48,7 @@
         <tr>
             <td height=2></td>
         </tr>
-
     </table>
-
 </form>
-
 </body>
-
 </html>
