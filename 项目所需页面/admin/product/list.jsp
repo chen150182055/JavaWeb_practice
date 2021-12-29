@@ -70,13 +70,13 @@
                             <td align="center" style="HEIGHT: 20px"><a
                                     href="${ pageContext.request.contextPath }/ProductInfoServlet?pid=${product.pid}&admin=admin">
                                 <img
-                                        src="${pageContext.request.contextPath}/images/i_edit.gif"
+                                        src="${pageContext.request.contextPath}/images/编辑.jpg"
                                         border="0" style="CURSOR: hand">
                             </a></td>
 
                             <td align="center" style="HEIGHT: 20px"><a href="/DeleteProductServlet?pid=${product.pid}">
                                 <img
-                                        src="${pageContext.request.contextPath}/images/i_edit.gif"
+                                        src="${pageContext.request.contextPath}/images/叉叉.jpg"
                                         border="0" style="CURSOR: hand">
                             </a></td>
                         </tr>
@@ -94,32 +94,36 @@
                         aria-hidden="true">&laquo;</span></a></li>
             </c:if>
             <c:if test="${currentPage!=1}">
-                <li><a href="/ProductListServlet?currentPage=${currentPage-1}&admin=admin" aria-label="Previous"><span
-                        aria-hidden="true">&laquo;</span></a></li>
+                <li><a href="/ProductListServlet?currentPage=${currentPage-1}&admin=admin" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+                </li>
             </c:if>
 
 
             <c:forEach begin="1" end="${totalPage}" var="pageNum">
                 <c:if test="${currentPage==pageNum}">
                     <li class="active">
-                        <a href="/ProductListServlet?currentPage=${pageNum}&admin=admin">${pageNum }</a>
+                        <a href="/ProductListServlet?currentPage=${pageNum}&admin=admin">
+                                ${pageNum }
+                        </a>
                     </li>
                 </c:if>
                 <c:if test="${currentPage!=pageNum }">
                     <li>
-                        <a href="/ProductListServlet?currentPage=${pageNum}&admin=admin">${pageNum}</a>
+                        <a href="/ProductListServlet?currentPage=${pageNum}&admin=admin">
+                                ${pageNum}
+                        </a>
                     </li>
                 </c:if>
             </c:forEach>
-
             <c:if test="${currentPage!=totalPage}">
                 <li>
-                    <a href="/ProductListServlet?currentPage=${currentPage+1}&admin=admin" aria-label="Next"> <span
-                        aria-hidden="true">&raquo;</span></a>
+                    <a href="/ProductListServlet?currentPage=${currentPage+1}&admin=admin" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
                 </li>
             </c:if>
-
-
             <c:if test="${currentPage==totalPage}">
                 <li class="disabled"><a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span>
                 </a>

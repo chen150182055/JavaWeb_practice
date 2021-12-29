@@ -52,14 +52,13 @@
 									width="17%">${category.cname}</td>
 								<td align="center" style="HEIGHT: 22px"><a
 									href="${ pageContext.request.contextPath }/EditCategoryServlet?cid=${category.cid}">
-										<img
-										src="${pageContext.request.contextPath}/images/i_edit.gif"
+										<img src="${pageContext.request.contextPath}/images/编辑.jpg"
 										border="0" style="CURSOR: hand">
 								</a></td>
 
 								<td align="center" style="HEIGHT: 22px">
 								 <a href="DeleteCategoryServlet?cid=${category.cid}">
-									<img src="${pageContext.request.contextPath}/images/i_edit.gif"
+									<img src="${pageContext.request.contextPath}/images/叉叉.jpg"
 										border="0" style="CURSOR: hand"></a></td>
 							</tr>
 							</c:forEach>

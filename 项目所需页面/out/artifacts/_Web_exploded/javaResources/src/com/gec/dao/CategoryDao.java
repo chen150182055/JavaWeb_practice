@@ -52,7 +52,7 @@ public class CategoryDao {
     }
 
     /**
-     *
+     * 添加商品分类
      * @param category
      * @return
      */
@@ -69,7 +69,7 @@ public class CategoryDao {
     }
 
     /**
-     *
+     * 获取商品分类
      * @param cid
      * @return
      */
@@ -85,7 +85,7 @@ public class CategoryDao {
     }
 
     /**
-     *
+     * 更新商品分类
      * @param cid
      * @param cname
      * @return
@@ -104,7 +104,7 @@ public class CategoryDao {
     }
 
     /**
-     *
+     * 删除商品分类
      * @param cid
      * @return
      */

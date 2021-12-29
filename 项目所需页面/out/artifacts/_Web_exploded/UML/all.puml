@@ -1,0 +1,385 @@
+@startuml
+class com.gec.servlet.OrderListServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.ManageOrderServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.QueDingOrderServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.CleanCartServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.test.TestC3P0 {
++ void test()
++ void testc()
++ void testDao()
+}
+class com.gec.servlet.AddProductServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.EditCategoryServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.entity.Category {
+- String cid
+- String cname
++ String getCid()
++ void setCid(String)
++ String getCname()
++ void setCname(String)
++ String toString()
+}
+class com.gec.servlet.RegisterServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.dao.OrderItemDao {
++ List<OrderItem> getOrderItemByOid(String)
++ int addOrderItem(OrderItem)
++ int deleteOrderItemByOid(String)
+}
+class com.gec.servlet.DeleteCategoryServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.SearchProductServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.test.TestJDBC {
+~ {static} String URL
+~ {static} String USERNAME
+~ {static} String PASSWORD
+~ {static} String DRIVER
++ void testJDBC()
+}
+class com.gec.entity.Cart {
+- Map<String,CartItem> cartItems
+- double total
++ Map<String,CartItem> getCartItems()
++ void setCartItems(Map<String,CartItem>)
++ double getTotal()
++ String toString()
+}
+class com.gec.entity.OrderItem {
+- String itemId
+- Product product
+- int count
+- double subtotal
+- String oid
++ String getOid()
++ void setOid(String)
++ String getItemId()
++ void setItemId(String)
++ Product getProduct()
++ void setProduct(Product)
++ int getCount()
++ void setCount(int)
++ double getSubtotal()
++ String toString()
+}
+class com.gec.servlet.UpdateUserInfoServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.DeleteOrderServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.dao.OrderDao {
++ Order getOrderByOid(String)
++ int addOrder(Order)
++ int updateOrderState(String)
++ int deleteOrderItemByOid(String)
++ List<Order> getOrderListByUid(String)
++ List<Order> getAllOrderList()
++ int assessOrder(String,String)
+}
+class com.gec.dao.UserDao {
++ User findUserByUsernameAndPassword(String,String)
++ User getUserByUsername(String)
++ int addUser(User)
++ int updateUserInfo(User)
+}
+class com.gec.servlet.DeleteProductServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.UpdateBuyNumServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.AccountServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.DeleteCartItemServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.ProductInfoServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.entity.User {
+- String uid
+- String username
+- String password
+- String name
+- String email
+- String telephone
+- String birthday
+- String sex
+- int state
+- String code
+- String address
++ String getUid()
++ void setUid(String)
++ String getUsername()
++ void setUsername(String)
++ String getPassword()
++ void setPassword(String)
++ String getName()
++ void setName(String)
++ String getEmail()
++ void setEmail(String)
++ String getTelephone()
++ void setTelephone(String)
++ String getBirthday()
++ void setBirthday(String)
++ String getSex()
++ void setSex(String)
++ int getState()
++ void setState(int)
++ String getCode()
++ void setCode(String)
++ String getAddress()
++ void setAddress(String)
++ String toString()
+}
+class com.gec.dao.CategoryDao {
+- QueryRunner qr
++ List<Category> getCategoryList()
++ int addCategory(Category)
++ Category getCategoryByCid(String)
++ int updateCategory(String,String)
++ int deleteCategoryByCid(String)
++ int updateCategoryByCid(String,String)
+}
+class com.gec.servlet.LoginServlet {
+~ UserService userService
+# void doPost(HttpServletRequest,HttpServletResponse)
+# void doGet(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.ZhuxiaoServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.entity.CartItem {
+- Product product
+- int buyNum
+- double subTotal
++ Product getProduct()
++ void setProduct(Product)
++ int getBuyNum()
++ void setBuyNum(int)
++ double getSubTotal()
++ String toString()
+}
+class com.gec.service.UserService {
+~ UserDao userDao
++ User login(String,String)
++ int updateUserInfo(User)
+}
+class com.gec.servlet.CategoryListServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.service.CategoryService {
+- CategoryDao categoryDao
++ List<Category> getCategoryList()
+}
+class com.gec.service.ProductService {
+~ ProductDao productDao
++ Map<String,List<Product>> findProduct()
++ List<Product> getProductList()
++ List<Product> getProductListByCid(String)
++ Product getProductById(String)
++ int deleteProductByPid(String)
++ int updateProduct(Product)
++ int addProduct(Product)
+}
+class com.gec.servlet.OrderInfoServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.test.C3P0Utils {
+- {static} ComboPooledDataSource datasource
++ {static} DataSource getDataSource()
++ {static} Connection getConnection()
+}
+class com.gec.servlet.IndexServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.EditProductServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.AssessOrderServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.AddCartServlet {
+- {static} long serialVersionUID
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.AllOrderListServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.dao.ProductDao {
+- QueryRunner qr
++ List<Product> getHotProductList()
++ List<Product> getNewProductList()
++ Product getProductByPid(String)
++ long getCount(String)
++ int updateProduct(Product)
++ List<Product> getProduct(int,int)
++ List<Product> getProductByCid(int,int,String)
++ int addProduct(Product)
++ int deleteProductByPid(String)
++ List<Product> searchProduct(String)
++ List<Product> getProductListByCid(String)
++ List<Product> getProductList()
+}
+class com.gec.servlet.ProductListServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.entity.Order {
+- String oid
+- String orderTime
+- String name
+- String address
+- String telephone
+- double total
+- int state
+- String uid
+- String assess
+- List<OrderItem> orderItems
++ String getOid()
++ void setOid(String)
++ String getOrderTime()
++ void setOrderTime(String)
++ String getName()
++ void setName(String)
++ String getAddress()
++ void setAddress(String)
++ String getTelephone()
++ void setTelephone(String)
++ double getTotal()
++ int getState()
++ void setState(int)
++ String getUid()
++ void setUid(String)
++ List<OrderItem> getOrderItems()
++ void setOrderItems(List<OrderItem>)
++ String getAssess()
++ void setAssess(String)
++ String toString()
+}
+class com.gec.servlet.UpdateCategoryServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.SubmitOrderServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.entity.Product {
+- String pid
+- String pname
+- double market_price
+- double shop_price
+- String pimage
+- String pdate
+- int is_hot
+- String pdesc
+- int pflag
+- String cid
++ String getPid()
++ void setPid(String)
++ String getPname()
++ void setPname(String)
++ double getMarket_price()
++ void setMarket_price(double)
++ double getShop_price()
++ void setShop_price(double)
++ String getPimage()
++ void setPimage(String)
++ String getPdate()
++ void setPdate(String)
++ int getIs_hot()
++ void setIs_hot(int)
++ String getPdesc()
++ void setPdesc(String)
++ int getPflag()
++ void setPflag(int)
++ String getCid()
++ void setCid(String)
++ String toString()
+}
+class com.gec.service.OrderService {
+~ OrderDao orderDao
+- OrderItemDao orderItemDao
++ Order creatOrder(User,Cart)
++ List<Order> getAllOrderList()
++ Order getOrderByOid(String)
++ int assessOrder(String,String)
++ int updateOrderState(String)
+}
+class com.gec.servlet.AddCategoryServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+
+
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.OrderListServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.ManageOrderServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.QueDingOrderServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.CleanCartServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AddProductServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.EditCategoryServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.RegisterServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.DeleteCategoryServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.SearchProductServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.UpdateUserInfoServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.DeleteOrderServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.DeleteProductServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.UpdateBuyNumServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AccountServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.DeleteCartItemServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.ProductInfoServlet
+javax.servlet.http.HttpServlet <|-- com.gec.servlet.LoginServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.ZhuxiaoServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.CategoryListServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.OrderInfoServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.IndexServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.EditProductServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AssessOrderServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AddCartServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AllOrderListServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.ProductListServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.UpdateCategoryServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.SubmitOrderServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AddCategoryServlet
+@enduml

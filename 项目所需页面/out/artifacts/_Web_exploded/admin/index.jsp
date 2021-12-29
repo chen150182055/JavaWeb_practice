@@ -5,10 +5,9 @@
 <head>
     <title>网上商城管理中心</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link href="${pageContext.request.contextPath }/css/general.css" rel="stylesheet" type="text/css"/>
-    <link href="${pageContext.request.contextPath }/css/main.css" rel="stylesheet" type="text/css"/>
-
-    <style type="text/css">
+    <link href="${pageContext.request.contextPath }/css/general.css" rel="stylesheet" type="text/css"/>   <!-- 引入本地项目CSS -->
+    <link href="${pageContext.request.contextPath }/css/main.css" rel="stylesheet" type="text/css"/>    <!-- 引入本地项目CSS -->
+    <style type="text/css">  /* 内嵌css */
         body {
             color: white;
         }

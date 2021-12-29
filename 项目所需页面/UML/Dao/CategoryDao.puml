@@ -1,0 +1,11 @@
+@startuml
+class com.gec.dao.CategoryDao {
+- QueryRunner qr
++ List<Category> getCategoryList()
++ int addCategory(Category)
++ Category getCategoryByCid(String)
++ int updateCategory(String,String)
++ int deleteCategoryByCid(String)
++ int updateCategoryByCid(String,String)
+}
+@enduml

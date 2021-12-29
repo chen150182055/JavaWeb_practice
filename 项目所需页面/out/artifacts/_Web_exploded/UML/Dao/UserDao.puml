@@ -1,0 +1,8 @@
+@startuml
+class com.gec.dao.UserDao {
++ User findUserByUsernameAndPassword(String,String)
++ User getUserByUsername(String)
++ int addUser(User)
++ int updateUserInfo(User)
+}
+@enduml

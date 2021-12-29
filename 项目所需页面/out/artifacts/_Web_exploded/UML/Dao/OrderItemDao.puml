@@ -1,0 +1,7 @@
+@startuml
+class com.gec.dao.OrderItemDao {
++ List<OrderItem> getOrderItemByOid(String)
++ int addOrderItem(OrderItem)
++ int deleteOrderItemByOid(String)
+}
+@enduml

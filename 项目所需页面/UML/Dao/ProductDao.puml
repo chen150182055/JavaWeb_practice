@@ -1,0 +1,17 @@
+@startuml
+class com.gec.dao.ProductDao {
+- QueryRunner qr
++ List<Product> getHotProductList()
++ List<Product> getNewProductList()
++ Product getProductByPid(String)
++ long getCount(String)
++ int updateProduct(Product)
++ List<Product> getProduct(int,int)
++ List<Product> getProductByCid(int,int,String)
++ int addProduct(Product)
++ int deleteProductByPid(String)
++ List<Product> searchProduct(String)
++ List<Product> getProductListByCid(String)
++ List<Product> getProductList()
+}
+@enduml

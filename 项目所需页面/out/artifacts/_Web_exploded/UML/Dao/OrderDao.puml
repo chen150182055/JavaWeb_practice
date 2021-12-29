@@ -1,0 +1,11 @@
+@startuml
+class com.gec.dao.OrderDao {
++ Order getOrderByOid(String)
++ int addOrder(Order)
++ int updateOrderState(String)
++ int deleteOrderItemByOid(String)
++ List<Order> getOrderListByUid(String)
++ List<Order> getAllOrderList()
++ int assessOrder(String,String)
+}
+@enduml
