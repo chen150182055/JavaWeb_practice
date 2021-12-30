@@ -29,6 +29,7 @@ public class AddCartServlet extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         //创建一个字符串用来存放request请求的pid
         String pid = request.getParameter("pid");
         //创建一个字符串用来存放request请求的buyNum

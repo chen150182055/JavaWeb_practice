@@ -213,7 +213,7 @@ A.eq:hover {
 	padding: 2px 4px 2px 10px;
 	border: 1px solid #8AA2CC;
 	background-attachment: fixed;
-	background-image: url(../images/button_ok.gif);
+	background-image: url(../images/button_ok.png);
 	background-repeat: no-repeat;
 	background-position: left center;
 	color: #2F3F5B;
@@ -232,7 +232,7 @@ A.eq:hover {
 	padding: 2px 4px 2px 10px;
 	border: 1px solid #8AA2CC;
 	background-attachment: fixed;
-	background-image: url(../images/button_cancel.gif);
+	background-image: url(../images/button_cancel.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	color: #2F3F5B;
@@ -251,7 +251,7 @@ A.eq:hover {
 	padding: 2px 4px 2px 10px;
 	border: 1px solid #8AA2CC;
 	background-attachment: fixed;
-	background-image: url(../images/button_help.gif);
+	background-image: url(../images/button_help.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	color: #2F3F5B;
@@ -270,7 +270,7 @@ A.eq:hover {
 	padding: 2px 4px 2px 10px;
 	border: 1px solid #8AA2CC;
 	background-attachment: fixed;
-	background-image: url(../images/button_search.gif);
+	background-image: url(../images/button_search.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	color: #2F3F5B;
@@ -280,15 +280,16 @@ A.eq:hover {
 	top: 10px;
 	right: 0px;
 	bottom: 10px;
-	clip:  rect(10px 10px 10px 10px);
+	clip: rect(10px 10px 10px 10px);
 	height: 20px;
+}
 	.button_search {
 	background-color: #DAE6FF;
 	margin: 1px;
 	padding: 2px 4px 2px 10px;
 	border: 1px solid #8AA2CC;
 	background-attachment: fixed;
-	background-image: url(../images/button_exit.gif);
+	background-image: url(../images/button_exit.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	color: #2F3F5B;
@@ -307,7 +308,7 @@ A.eq:hover {
 	padding: 2px 4px 2px 10px;
 	border: 1px solid #8AA2CC;
 	background-attachment: fixed;
-	background-image: url(../images/button_view.gif);
+	background-image: url(../images/button_view.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	color: #2F3F5B;
@@ -326,7 +327,7 @@ A.eq:hover {
 	padding: 2px 4px 2px 10px;
 	border: 1px solid #8AA2CC;
 	background-attachment: fixed;
-	background-image: url(../images/button_add.gif);
+	background-image: url(../images/button_add.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	color: #2F3F5B;
@@ -345,7 +346,7 @@ A.eq:hover {
 	padding: 2px 4px 2px 10px;
 	border: 1px solid #8AA2CC;
 	background-attachment: fixed;
-	background-image: url(../images/button_del.gif);
+	background-image: url(../images/button_del.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	color: #2F3F5B;
@@ -364,7 +365,7 @@ A.eq:hover {
 	padding: 2px 4px 2px 10px;
 	border: 1px solid #8AA2CC;
 	background-attachment: fixed;
-	background-image: url(../images/button_print.gif);
+	background-image: url(../images/button_print.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	color: #2F3F5B;
@@ -402,7 +403,7 @@ A.eq:hover {
 	padding: 2px 4px 2px 10px;
 	border: 1px solid #8AA2CC;
 	background-attachment: fixed;
-	background-image: url(../images/button_save.gif);
+	background-image: url(../images/button_save.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	color: #2F3F5B;
@@ -421,7 +422,7 @@ A.eq:hover {
 	padding: 2px 4px 2px 10px;
 	border: 1px solid #8AA2CC;
 	background-attachment: fixed;
-	background-image: url(../images/button_alert.gif);
+	background-image: url(../images/button_alert.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	color: #2F3F5B;
@@ -440,7 +441,7 @@ A.eq:hover {
 	padding: 2px 4px 2px 10px;
 	border: 1px solid #8AA2CC;
 	background-attachment: fixed;
-	background-image: url(../images/button_clock.gif);
+	background-image: url(../images/button_clock.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	color: #2F3F5B;
@@ -522,7 +523,7 @@ A.eq:hover {
 .optionOff 
 {
 	color:#909090;
-	background-image:url(../images/optionbgOff.gif);
+	background-image:url(../images/optionbgOff.jpg);
 	background-position:right;
 	background-repeat:no-repeat;
 	border-left:1px solid #a0a0a0;
@@ -532,7 +533,7 @@ A.eq:hover {
 }
 .optionOn {
 	color:#1E6BAE;
-	background-image:url(../images/optionbgOn.gif);
+	background-image:url(../images/optionbgOn.jpeg);
 	background-position:right;
 	background-repeat:no-repeat;
 	border-left:1px solid #808080;

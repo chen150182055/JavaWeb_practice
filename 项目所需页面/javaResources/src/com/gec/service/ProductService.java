@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//商品服务层
 public class ProductService {
 
 
@@ -14,7 +15,7 @@ public class ProductService {
     //查询最新商品和最热商品的方法
 
     /**
-     *
+     * 查找商品
      * @return
      */
     public Map<String,List<Product>> findProduct(){
@@ -22,7 +23,7 @@ public class ProductService {
             //先查询热门商品和最新商品 然后将他们存放到Map容器
             List<Product> findHotProduct = productDao.getHotProductList();
             List<Product> findNewProduct = productDao.getNewProductList();
-            Map<String,List<Product>> map = new HashMap<String, List<Product>>();
+            Map<String,List<Product>> map = new HashMap<String, List<Product>>();     //
             map.put("hotProducts", findHotProduct);
             map.put("newProducts", findNewProduct);
             return map;
@@ -33,7 +34,7 @@ public class ProductService {
     }
 
     /**
-     *
+     * 获取商品清单
      * @return
      */
     public List<Product> getProductList() {
@@ -42,7 +43,7 @@ public class ProductService {
     }
 
     /**
-     *
+     * 通过cid获取商品列表
      * @param cid
      * @return
      */
@@ -52,11 +53,10 @@ public class ProductService {
     }
 
     /**
-     *
+     * 根据id查询商品
      * @param pid
      * @return
      */
-    //根据id查询商品
     public Product getProductById(String pid) {
         try {
             Product findProductById =productDao.getProductByPid(pid);
@@ -69,7 +69,7 @@ public class ProductService {
     }
 
     /**
-     *
+     * 删除商品通过pid
      * @param pid
      * @return
      */
@@ -78,7 +78,7 @@ public class ProductService {
     }
 
     /**
-     *
+     * 更新商品
      * @param product
      * @return
      */
@@ -87,7 +87,7 @@ public class ProductService {
     }
 
     /**
-     *
+     * 添加商品
      * @param product
      * @return
      */

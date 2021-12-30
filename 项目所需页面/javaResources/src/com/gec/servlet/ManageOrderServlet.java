@@ -15,6 +15,7 @@ import java.util.List;
 public class ManageOrderServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         String admin=request.getParameter("admin");
         String oid=request.getParameter("oid");
         String s=request.getParameter("state");
@@ -46,9 +47,11 @@ public class ManageOrderServlet extends HttpServlet {
             orderService.updateOrderState(oid);
             response.sendRedirect("OrderListServlet?currentPage=1");
         }else if(state==3){
+            //实现页面转发 转发到.jsp页面 forward是把request请求和response请求都转发过去
             request.getRequestDispatcher("assess.jsp").forward(request, response);
 
         }else{
+            //实现页面转发 转发到.jsp页面 forward是把request请求和response请求都转发过去
             request.getRequestDispatcher("order.jsp").forward(request, response);
         }
 

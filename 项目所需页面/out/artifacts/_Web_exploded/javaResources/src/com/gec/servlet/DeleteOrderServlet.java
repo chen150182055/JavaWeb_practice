@@ -10,6 +10,7 @@ import java.io.IOException;
 public class DeleteOrderServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         String oid=request.getParameter("oid");  //获取名为oid的参数值
         //创建一个OrderDao对象
         OrderDao orderDao = new OrderDao();

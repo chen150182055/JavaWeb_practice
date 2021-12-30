@@ -27,7 +27,7 @@
     <link href="${pageContext.request.contextPath}/css/Style1.css" rel="stylesheet" type="text/css">
 </HEAD>
 <body>
-<table width="100%" height="70%" border="0" cellspacing="0" cellpadding="0">
+<table width="100%" height="70%" border="0" cellspacing="0" cellpadding="0" style="color: #1b6d85">
     <tr>
         <td>
             <img width="100%" src="${pageContext.request.contextPath}/images/好日子.jpg">

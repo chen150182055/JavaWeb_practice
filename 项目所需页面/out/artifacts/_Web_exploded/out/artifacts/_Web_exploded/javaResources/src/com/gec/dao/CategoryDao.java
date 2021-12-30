@@ -122,7 +122,7 @@ public class CategoryDao {
     }
 
     /**
-     *
+     * 根据传入的分类id更新分类
      * @param cid
      * @param cname
      * @return

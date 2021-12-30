@@ -1,7 +1,7 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<HTML>
-<HEAD>
+<html>
+<head>
     <meta http-equiv="Content-Language" content="zh-cn">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
@@ -15,7 +15,7 @@
             window.location.href = "${pageContext.request.contextPath}/admin/product/add.jsp";
         }
     </script>
-</HEAD>
+</head>
 <body>
 <br>
 <form id="Form1" name="Form1" style="width:95%;margin:0 auto;" action="${pageContext.request.contextPath}/user/list.jsp"
@@ -78,10 +78,16 @@
             </c:if>
             <c:forEach begin="1" end="${totalPage}" var="pageNum">
                 <c:if test="${currentPage==pageNum}">
-                    <li class="active"><a href="AllOrderListServlet?currentPage=${pageNum}">${pageNum }</a></li>
+                    <li class="active">
+                        <a href="AllOrderListServlet?currentPage=${pageNum}">
+                                ${pageNum }
+                        </a>
+                    </li>
                 </c:if>
                 <c:if test="${currentPage!=pageNum }">
-                    <li><a href="AllOrderListServlet?currentPage=${pageNum}">${pageNum}</a></li>
+                    <li>
+                        <a href="AllOrderListServlet?currentPage=${pageNum}">${pageNum}</a>
+                    </li>
                 </c:if>
             </c:forEach>
 
@@ -94,13 +100,13 @@
 
 
             <c:if test="${currentPage==totalPage}">
-                <li class="disabled"><a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span>
-                </a>
+                <li class="disabled">
+                    <a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span></a>
                 </li>
             </c:if>
         </ul>
     </div>
 </form>
 </body>
-</HTML>
+</html>
 

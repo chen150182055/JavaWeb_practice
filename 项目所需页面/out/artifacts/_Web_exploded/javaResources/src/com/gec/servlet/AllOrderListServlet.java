@@ -13,6 +13,7 @@ import java.util.List;
 public class AllOrderListServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         String s = request.getParameter("currentPage");
         int currentPage = Integer.parseInt(s);
         OrderService orderService = new OrderService();
@@ -26,6 +27,7 @@ public class AllOrderListServlet extends HttpServlet {
         request.setAttribute("currentPage", currentPage);
         request.setAttribute("totalPage", totalPage);
         request.setAttribute("orderList", orderList1);
+        //实现页面转发 转发到admin/order/list.jsp页面 forward是把request请求和response请求都转发过去
         request.getRequestDispatcher("admin/order/list.jsp").forward(request, response);
     }
 

@@ -1,13 +1,13 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<HTML>
-<HEAD>
+<html>
+<head>
     <meta http-equiv="Content-Language" content="zh-cn">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <LINK href="${pageContext.request.contextPath}/css/Style1.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
-</HEAD>
+</head>
 
 <body>
 <!--  -->
@@ -43,9 +43,8 @@
                 </tr>
                 <c:forEach items="${order.orderItems}" var="orderItem">
                     <tr class="active">
-                        <td width="60" width="40%"><input type="hidden" name="id"
-                                                          value="22"> <img src="${orderItem.product.pimage }" width="70"
-                                                                           height="60"></td>
+                        <td width="60" width="40%"><input type="hidden" name="id" value="22">
+                            <img src="${orderItem.product.pimage }" width="70" height="60"></td>
                         <td width="30%"><a target="_blank"> ${orderItem.product.pname }</a></td>
                         <td width="20%">￥${orderItem.product.shop_price }</td>
                         <td width="10%">${orderItem.count }</td>
@@ -81,11 +80,11 @@
                     <div>
                         <textarea cols="30" rows="10" disabled="disabled">${order.assess}</textarea>
                     </div>
-                    <INPUT class="button_ok" type="button" onclick="history.go(-1)" value="返回"/>
+                    <input class="button_ok" type="button" onclick="history.go(-1)" value="返回"/>
                 </div>
             </div>
         </tr>
     </table>
 </div>
 </body>
-</HTML>
+</html>

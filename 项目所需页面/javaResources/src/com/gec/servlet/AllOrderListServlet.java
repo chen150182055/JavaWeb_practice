@@ -13,11 +13,12 @@ import java.util.List;
 public class AllOrderListServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String s = request.getParameter("currentPage");
-        int currentPage = Integer.parseInt(s);
-        OrderService orderService = new OrderService();
-        List<Order> orderList = orderService.getAllOrderList();
-        List<Order> orderList1 = new ArrayList<Order>();
+        //getParameter()用于单个值的读取 参数多为表单中控件的name属性
+        String s = request.getParameter("currentPage");   //获取request作用域中属性名为currentPage的值
+        int currentPage = Integer.parseInt(s);              //将currPage转换为int类型
+        OrderService orderService = new OrderService();     //调用service以便间接调用dao层
+        List<Order> orderList = orderService.getAllOrderList();   //将所有订单查出并将其存入一个List
+        List<Order> orderList1 = new ArrayList<Order>();        //
         int n = 5;
         int totalPage = (orderList.size() - 1) / n + 1;
         for (int i = (currentPage - 1) * n; i < currentPage * n && i < orderList.size(); i++) {
@@ -26,6 +27,7 @@ public class AllOrderListServlet extends HttpServlet {
         request.setAttribute("currentPage", currentPage);
         request.setAttribute("totalPage", totalPage);
         request.setAttribute("orderList", orderList1);
+        //实现页面转发 转发到admin/order/list.jsp页面 forward是把request请求和response请求都转发过去
         request.getRequestDispatcher("admin/order/list.jsp").forward(request, response);
     }
 

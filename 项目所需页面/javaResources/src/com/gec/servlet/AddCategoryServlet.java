@@ -8,10 +8,11 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.UUID;
 
-//添加商品分类
+//添加商品分类(admin)
 public class AddCategoryServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         String cname=request.getParameter("cname");  //获取分类名称
         Category category=new Category();       //创建Category对象
         category.setCid(UUID.randomUUID().toString());      //设置一个随机分类id

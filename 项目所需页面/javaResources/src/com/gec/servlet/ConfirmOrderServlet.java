@@ -10,9 +10,10 @@ import java.io.IOException;
 import java.util.*;
 
 //确定订单
-public class QueDingOrderServlet extends HttpServlet {
+public class ConfirmOrderServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         HttpSession session = request.getSession();
         String oid = request.getParameter("oid");      //获取oid
         String address = request.getParameter("address");  //获取address
@@ -50,7 +51,6 @@ public class QueDingOrderServlet extends HttpServlet {
             orderItem.setProduct(cartItem.getValue().getProduct());
             orderItems.add(orderItem);
 
-
         }
         order.setOrderItems(orderItems);
         orderDao.addOrder(order); //将订单信息写入数据表中  一定要写在后面不然计算不了总价
@@ -62,6 +62,7 @@ public class QueDingOrderServlet extends HttpServlet {
         session.removeAttribute("cart");
         //获取订单中详细的商品信息
         request.setAttribute("order", order);
+        //实现页面转发 转发到.jsp页面 forward是把request请求和response请求都转发过去
         request.getRequestDispatcher("account.jsp").forward(request, response);
     }
 

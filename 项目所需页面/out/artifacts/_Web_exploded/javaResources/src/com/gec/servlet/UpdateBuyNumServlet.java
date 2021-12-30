@@ -12,6 +12,7 @@ import java.util.Map;
 public class UpdateBuyNumServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         String pid = request.getParameter("pid");   //获取产品的id pid
         String s = request.getParameter("buyNum");  //获取产品的购买数量
         int buyNum = Integer.parseInt(s);   //将购买数量转换成int类型的数据

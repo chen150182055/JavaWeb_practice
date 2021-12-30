@@ -43,7 +43,7 @@
     <description></description>
     <display-name>ZhuxiaoServlet</display-name>
     <servlet-name>ZhuxiaoServlet</servlet-name>
-    <servlet-class>com.gec.servlet.ZhuxiaoServlet</servlet-class>
+    <servlet-class>com.gec.servlet.LogoutServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ZhuxiaoServlet</servlet-name>
@@ -143,7 +143,7 @@
     <description></description>
     <display-name>QueDingOrderServlet</display-name>
     <servlet-name>QueDingOrderServlet</servlet-name>
-    <servlet-class>com.gec.servlet.QueDingOrderServlet</servlet-class>
+    <servlet-class>com.gec.servlet.ConfirmOrderServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>QueDingOrderServlet</servlet-name>

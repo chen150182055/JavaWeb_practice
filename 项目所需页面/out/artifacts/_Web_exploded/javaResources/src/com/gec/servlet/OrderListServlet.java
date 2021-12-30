@@ -11,9 +11,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+//订单列表
 public class OrderListServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         String s = request.getParameter("currentPage");   //获取currentPage
         int currentPage = Integer.parseInt(s);  //将currentPage转换为int类型的数据
         OrderDao orderDao = new OrderDao();     //创建dao层操作数据库
@@ -47,7 +49,8 @@ public class OrderListServlet extends HttpServlet {
             request.setAttribute("currentPage", currentPage);   //将currentPage对象放入request作用域中
             request.setAttribute("totalPage", totalPage);       //将totalPage放入request作用域中
             request.setAttribute("orderList", orderList1);      //将orderList1放入request作用域中
-            request.getRequestDispatcher("order_list.jsp").forward(request, response);  //页面重定向到order_list.jsp
+            //实现页面转发 转发到.jsp页面 forward是把request请求和response请求都转发过去
+            request.getRequestDispatcher("order_list.jsp").forward(request, response);
 
         }
     }

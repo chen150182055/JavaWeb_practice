@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+//登录实现
 public class LoginServlet extends HttpServlet {
 
     UserService userService = new UserService();
@@ -17,6 +18,7 @@ public class LoginServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { //处理POST类型的请求
+        //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         String username = req.getParameter("username");   //获取名为username的参数值(用户名)
         String password = req.getParameter("password");   //获取名为password的参数值(密码)
         User user = userService.login(username,password);   //调用dao层的login方法从而实现数据库查找用户
@@ -47,6 +49,7 @@ public class LoginServlet extends HttpServlet {
         }else {
 
             request.setAttribute("error", "账号或密码输入错误，请重新确认...");
+            //实现页面转发 转发到.jsp页面 forward是把request请求和response请求都转发过去
             request.getRequestDispatcher("login.jsp").forward(request, response);
         }
     }

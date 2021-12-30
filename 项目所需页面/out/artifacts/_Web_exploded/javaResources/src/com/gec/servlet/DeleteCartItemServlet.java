@@ -12,7 +12,7 @@ import java.util.Map;
 public class DeleteCartItemServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-        //
+        //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         String pid = request.getParameter("pid");   //获取pid
         HttpSession session = request.getSession();   //获取session
         Cart cart = (Cart) session.getAttribute("cart");    //在session中获取购物车

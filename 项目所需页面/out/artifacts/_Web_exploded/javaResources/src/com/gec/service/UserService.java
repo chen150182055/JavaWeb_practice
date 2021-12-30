@@ -3,6 +3,7 @@ package com.gec.service;
 import com.gec.dao.UserDao;
 import com.gec.entity.User;
 
+//用户服务层
 public class UserService {
     UserDao userDao = new UserDao();
 

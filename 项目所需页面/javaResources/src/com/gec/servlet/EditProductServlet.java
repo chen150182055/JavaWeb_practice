@@ -11,6 +11,7 @@ import java.io.IOException;
 public class EditProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         String pid=request.getParameter("pid");
         String pname=request.getParameter("pname");
         String s=request.getParameter("is_hot");

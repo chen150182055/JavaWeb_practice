@@ -17,7 +17,7 @@
 
         -->
     </style>
-</HEAD>
+</head>
 <body MS_POSITIONING="GridLayout">
 <table width="100%" border="0" cellspacing="0" cellpadding="10" height="64">
     <tr>
@@ -25,7 +25,7 @@
             background="${pageContext.request.contextPath}/images/好日子.jpg">商城管理平台&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
             <font class="font12">
                 <a class="a03" target="_blank" href="mailto:sarft@chinasarft.gov.cn">
-                    <font color="#000000"><br>
+                    <font color="blue"><br>
                         邮箱
                     </font>
                 </a>

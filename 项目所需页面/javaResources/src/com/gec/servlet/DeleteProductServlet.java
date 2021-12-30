@@ -10,6 +10,7 @@ import java.io.IOException;
 public class DeleteProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         String pid=request.getParameter("pid");  //获取产cid
         ProductService productService=new ProductService(); //调用service层间接调用dao层操作数据库
         productService.deleteProductByPid(pid); //执行删除

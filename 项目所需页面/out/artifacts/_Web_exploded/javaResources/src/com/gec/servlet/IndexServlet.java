@@ -14,6 +14,7 @@ import java.util.List;
 public class IndexServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         CategoryDao categoryDao = new CategoryDao();
         List<Category> categoryList = categoryDao.getCategoryList();
         HttpSession session = request.getSession();	//获取session会话对象
@@ -26,7 +27,7 @@ public class IndexServlet extends HttpServlet {
 
         request.setAttribute("hotProductList", hotProductList);
         request.setAttribute("newProductList", newProductList);
-
+        //实现页面转发 转发到.jsp页面 forward是把request请求和response请求都转发过去
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 

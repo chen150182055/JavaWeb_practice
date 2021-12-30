@@ -17,6 +17,7 @@ import java.util.List;
 public class ProductListServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         String admin = request.getParameter("admin");   //创建一个字符串用来存放admin
         String s = request.getParameter("currentPage"); //创建一个字符串用来存放currentPage（商品第几页）
         int currentPage = Integer.parseInt(s);    //将currentPage转换成int类型的数据
@@ -51,6 +52,7 @@ public class ProductListServlet extends HttpServlet {
             request.getRequestDispatcher("admin/product/list.jsp").forward(request, response);  //重定向到list.jsp
 
         } else {   //如果是普通用户
+            //实现页面转发 转发到.jsp页面 forward是把request请求和response请求都转发过去
             request.getRequestDispatcher("product_list.jsp").forward(request, response);        //重定向到product_list.jsp中
 
         }
