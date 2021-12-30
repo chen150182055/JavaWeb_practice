@@ -22,7 +22,7 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="10" height="64">
     <tr>
         <td align="center" width="100%" style="" valign="top"
-            background="${pageContext.request.contextPath}/images/购物车空了.jpg">商城管理平台&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+            background="${pageContext.request.contextPath}/images/好日子.jpg">商城管理平台&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
             <font class="font12">
                 <a class="a03" target="_blank" href="mailto:sarft@chinasarft.gov.cn">
                     <font color="#000000"><br>

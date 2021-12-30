@@ -23,6 +23,7 @@ public class UpdateUserInfoServlet extends HttpServlet {
         String sex = request.getParameter("sex");       //获取用户性别
         String birthday = request.getParameter("birthday"); //获取用户生日
         String address = request.getParameter("address");   //获取用户地址
+        System.out.println("UpdateUserInfoServlet address = "+address);
         String email = request.getParameter("email");       //获取用户邮箱
         String telephone = request.getParameter("telephone");   //获取用户手机号
         //从session中获取user

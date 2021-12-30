@@ -9,27 +9,29 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+//查询商品
 public class SearchProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String search=request.getParameter("search");
-        String s=request.getParameter("currentPage");
-        System.out.println("search"+search+"currentPage" );
-        int currentPage=Integer.parseInt(s);
+        request.setCharacterEncoding("UTF-8");
+        String search = request.getParameter("search");  //获取表单中的search
+        String s = request.getParameter("currentPage");  //获取表单中currentPage
+        System.out.println("SearchProductServlet: search = " + search + " currentPage = " + s);
+        int currentPage = Integer.parseInt(s);
 
 
         ProductDao productDao = new ProductDao();
-        List<Product> productList=productDao.searchProduct("%"+search+"%");
-        int n=12;
+        List<Product> productList = productDao.searchProduct("%" + search + "%");
+        int n = 12;
 
-        int totalPage=0;
-        if(productList.size()%n>0) {
-            totalPage = productList.size()/n+1;
-        }else {
-            totalPage = productList.size()/n;
+        int totalPage = 0;
+        if (productList.size() % n > 0) {
+            totalPage = productList.size() / n + 1;
+        } else {
+            totalPage = productList.size() / n;
         }
-        List<Product> productList1=new ArrayList<Product>();
-        for(int i=(currentPage-1)*n;i<currentPage*n&&i<productList.size();i++){
+        List<Product> productList1 = new ArrayList<Product>();
+        for (int i = (currentPage - 1) * n; i < currentPage * n && i < productList.size(); i++) {
             productList1.add(productList.get(i));
         }
 

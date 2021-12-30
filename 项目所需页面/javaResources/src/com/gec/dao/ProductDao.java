@@ -116,7 +116,7 @@ public class ProductDao {
     }
 
     /**
-     *
+     * 更新商品信息
      * @param product
      * @return
      */
@@ -138,7 +138,6 @@ public class ProductDao {
 
     /**
      * 分页查询商品记录
-     *
      * @param currentPage
      * @param size
      * @return
@@ -160,7 +159,6 @@ public class ProductDao {
 
     /**
      * 通过商品分类id来查询商品信息
-     *
      * @param start
      * @param size
      * @param cid
@@ -182,7 +180,7 @@ public class ProductDao {
     }
 
     /**
-     *
+     * 添加商品信息
      * @param product
      * @return
      */
@@ -202,7 +200,7 @@ public class ProductDao {
     }
 
     /**
-     *
+     * 删除商品信息
      * @param pid
      * @return
      */
@@ -224,7 +222,7 @@ public class ProductDao {
     }
 
     /**
-     * 	模糊搜索所有商品信息
+     * 模糊搜索所有商品信息
      * @param search
      * @return
      */
@@ -233,6 +231,7 @@ public class ProductDao {
         String sql="select * from Product where pname like ? or pdesc like ?";
         List<Product> list=null;
         try {
+            //query(Connection conn, String sql, Object[] params, ResultSetHandler rsh)：执行选择查询，在查询中，对象阵列的值被用来作为查询的置换参数。
             list = qr.query(sql, new BeanListHandler<Product>(Product.class),search,search);
         } catch (SQLException e) {
             e.printStackTrace();
@@ -241,7 +240,7 @@ public class ProductDao {
     }
 
     /**
-     *
+     * 通过cid获取产品信息
      * @param cid
      * @return
      */
@@ -249,6 +248,7 @@ public class ProductDao {
         String sql="select * from Product where cid=?";
         List<Product> list=null;
         try {
+            //query(Connection conn, String sql, Object[] params, ResultSetHandler rsh)：执行选择查询，在查询中，对象阵列的值被用来作为查询的置换参数。
             list = qr.query(sql, new BeanListHandler<Product>(Product.class),cid);
         } catch (SQLException e) {
             // TODO Auto-generated catch block
@@ -261,7 +261,7 @@ public class ProductDao {
     }
 
     /**
-     *
+     * 获取产品列表
      * @return
      */
     public List<Product> getProductList() {

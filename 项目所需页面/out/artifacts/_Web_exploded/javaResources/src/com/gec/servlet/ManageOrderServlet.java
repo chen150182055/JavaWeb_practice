@@ -22,6 +22,14 @@ public class ManageOrderServlet extends HttpServlet {
         int state=Integer.parseInt(s);
         Order order=orderService.getOrderByOid(oid);
         request.setAttribute("order", order);
+
+        /**
+         * * state等于0时，用户需要去付款
+         * * state等于1时，用户可以进行催单（以及付款但是商家却没有发货）
+         * * state等于2时，确定收货
+         * * state等于3时，用户收完货了才能进行订单的评价
+         * * state等于4时，才能够查看对应的订单信息
+         */
         if(state==0){
             request.getRequestDispatcher("order_info.jsp").forward(request, response);
         }

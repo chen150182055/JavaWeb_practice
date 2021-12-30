@@ -9,6 +9,7 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.*;
 
+//确定订单
 public class QueDingOrderServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -27,11 +28,11 @@ public class QueDingOrderServlet extends HttpServlet {
 
         Order order = new Order();
         order.setOid(oid);
-        order.setUid(user.getUid());  //设置购买人信息
-        order.setAddress(address);
-        order.setName(name);
-        order.setTelephone(telephone);
-        order.setState(0);
+        order.setUid(user.getUid());  //设置订单中购买人信息
+        order.setAddress(address);    //设置订单中的地址
+        order.setName(name);          //设置订单中的名字
+        order.setTelephone(telephone);//设置订单中的电话号码
+        order.setState(0);            //设置订单中的状态
 
 
         //将购物车中的商品都取出来 然后放到订单类中

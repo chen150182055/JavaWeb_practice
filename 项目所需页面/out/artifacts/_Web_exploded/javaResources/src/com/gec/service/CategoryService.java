@@ -6,10 +6,9 @@ import com.gec.entity.Category;
 import java.util.List;
 
 public class CategoryService {
-    private CategoryDao categoryDao=new CategoryDao();
-    public List<Category> getCategoryList(){
+    private CategoryDao categoryDao = new CategoryDao();
 
+    public List<Category> getCategoryList() {
         return categoryDao.getCategoryList();
-
     }
 }

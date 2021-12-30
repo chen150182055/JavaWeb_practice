@@ -11,7 +11,7 @@ import java.util.UUID;
 public class RegisterServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-// 设置一下这个编码格式
+        // 设置一下这个编码格式
         request.setCharacterEncoding("UTF-8");
         // 获取表单提交过来的数据
         String username = request.getParameter("username");
@@ -23,7 +23,6 @@ public class RegisterServlet extends HttpServlet {
         String birthday = request.getParameter("birthday");
         String address = request.getParameter("address");
         System.out.println(address);
-
         // 判断一下这个账号是否存在
         UserDao userDao = new UserDao();
         User user = null;
@@ -34,7 +33,7 @@ public class RegisterServlet extends HttpServlet {
         } else {
             // 账号没有被注册过的情况
             user = new User();
-
+            //设置用户相关的信息
             user.setUid(UUID.randomUUID().toString());
             user.setUsername(username);
             user.setPassword(password);
@@ -44,7 +43,6 @@ public class RegisterServlet extends HttpServlet {
             user.setSex(sex);
             user.setBirthday(birthday);
             user.setAddress(address);
-
             // 调用添加数据到数据库的方法
             int result = userDao.addUser(user);
             if (result <= 0) {
@@ -53,7 +51,6 @@ public class RegisterServlet extends HttpServlet {
             } else {
                 response.sendRedirect("login.jsp");
             }
-
         }
     }
 

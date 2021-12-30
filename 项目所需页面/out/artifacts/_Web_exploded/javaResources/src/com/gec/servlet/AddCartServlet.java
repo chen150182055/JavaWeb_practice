@@ -17,6 +17,7 @@ public class AddCartServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
+     * 构造方法
      * @see HttpServlet#HttpServlet()
      */
     public AddCartServlet() {

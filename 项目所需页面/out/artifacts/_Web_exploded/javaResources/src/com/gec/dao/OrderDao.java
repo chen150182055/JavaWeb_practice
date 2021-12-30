@@ -33,8 +33,7 @@ public class OrderDao {
 
 
     /**
-     *	 根据订单编号来获取订单信息
-     *
+     * 根据订单编号来获取订单信息
      * @param oid
      * @return
      */
@@ -54,7 +53,11 @@ public class OrderDao {
         return order;  //返回该order对象
     }
 
-    //向订单表中添加一条信息
+    /**
+     * 向订单表中添加一条信息
+     * @param order
+     * @return
+     */
     public int addOrder(Order order){
         QueryRunner qr = new QueryRunner(C3P0Utils.getDataSource());
         //创建一个字符串用来存放sql语句 插入Orders表中
@@ -74,7 +77,6 @@ public class OrderDao {
 
     /**
      * 修改订单状态
-     *
      * @param oid
      * @return
      */
@@ -118,7 +120,7 @@ public class OrderDao {
     }
 
     /**
-     *
+     * 通过用户id获取订单
      * @param uid
      * @return
      */
@@ -135,7 +137,7 @@ public class OrderDao {
     }
 
     /**
-     *
+     * 获取所有订单
      * @return
      */
     public List<Order> getAllOrderList() {
@@ -152,7 +154,7 @@ public class OrderDao {
     }
 
     /**
-     *
+     * 更新订单评价
      * @param oid
      * @param assess
      * @return

@@ -14,14 +14,14 @@ import java.util.List;
 public class OrderListServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String s = request.getParameter("currentPage");
-        int currentPage = Integer.parseInt(s);
-        OrderDao orderDao = new OrderDao();
-        HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("user");
+        String s = request.getParameter("currentPage");   //获取currentPage
+        int currentPage = Integer.parseInt(s);  //将currentPage转换为int类型的数据
+        OrderDao orderDao = new OrderDao();     //创建dao层操作数据库
+        HttpSession session = request.getSession();  //获取session对象
+        User user = (User) session.getAttribute("user");    //将user放入session作用域中
         //查看订单列表 如果用户没有登录的话就跳转到登录页面
         if (user == null) {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect("login.jsp");   //跳转到登录页面
         } else {
             //取出数据库订单表中的订单信息
             List<Order> orderList = orderDao.getOrderListByUid(user.getUid());
@@ -34,20 +34,20 @@ public class OrderListServlet extends HttpServlet {
             int n = 5;
             int totalPage = 0;
 
-            if(orderList.size()%n>0){
-                totalPage = orderList.size()/n+1;
-            }else{
-                totalPage = orderList.size()/n;
+            if (orderList.size() % n > 0) {
+                totalPage = orderList.size() / n + 1;
+            } else {
+                totalPage = orderList.size() / n;
             }
 
             for (int i = (currentPage - 1) * n; i < currentPage * n && i < orderList.size(); i++) {
                 orderList1.add(orderList.get(i));
             }
 
-            request.setAttribute("currentPage", currentPage);
-            request.setAttribute("totalPage", totalPage);
-            request.setAttribute("orderList", orderList1);
-            request.getRequestDispatcher("order_list.jsp").forward(request, response);
+            request.setAttribute("currentPage", currentPage);   //将currentPage对象放入request作用域中
+            request.setAttribute("totalPage", totalPage);       //将totalPage放入request作用域中
+            request.setAttribute("orderList", orderList1);      //将orderList1放入request作用域中
+            request.getRequestDispatcher("order_list.jsp").forward(request, response);  //页面重定向到order_list.jsp
 
         }
     }

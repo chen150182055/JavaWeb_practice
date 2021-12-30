@@ -12,14 +12,14 @@ import java.util.UUID;
 public class AddProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String pname=request.getParameter("pname");
-        String s=request.getParameter("is_hot");
+        String pname=request.getParameter("pname");  //获取产品名
+        String s=request.getParameter("is_hot");     //获取是否是热门商品
         int is_hot=Integer.parseInt(s);
-        String s1=request.getParameter("market_price");
+        String s1=request.getParameter("market_price");   //获取市场价格
         double market_price=Double.parseDouble(s1);
-        String s2=request.getParameter("shop_price");
+        String s2=request.getParameter("shop_price");   //获取商店价格
         double shop_price=Double.parseDouble(s2);
-        String cid=request.getParameter("cid");
+        String cid=request.getParameter("cid");         //获取
         String pdesc=request.getParameter("pdesc");
 
         Product product=new Product();

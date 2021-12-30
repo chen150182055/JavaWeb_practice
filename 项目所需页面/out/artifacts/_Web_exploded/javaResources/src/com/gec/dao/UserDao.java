@@ -30,8 +30,6 @@ public class UserDao {
 
     /**
      * 通过用户名和密码查询用户
-     *
-     *
      * @param username
      * @param password
      * @return
@@ -48,7 +46,6 @@ public class UserDao {
 
     /**
      * 通过用户名查询用户
-     *
      * @param username
      * @return
      */
