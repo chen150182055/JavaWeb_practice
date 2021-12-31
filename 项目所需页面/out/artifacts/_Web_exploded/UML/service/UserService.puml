@@ -1,0 +1,7 @@
+@startuml
+class com.gec.service.UserService {
+~ UserDao userDao
++ User login(String,String)
++ int updateUserInfo(User)
+}
+@enduml

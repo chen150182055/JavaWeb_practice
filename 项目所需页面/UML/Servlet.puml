@@ -1,0 +1,150 @@
+@startuml
+class com.gec.servlet.LogoutServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.OrderListServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.LoginServlet {
+~ UserService userService
+# void doPost(HttpServletRequest,HttpServletResponse)
+# void doGet(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.ManageOrderServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.CleanCartServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.AddProductServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.CategoryListServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.EditCategoryServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.OrderInfoServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.RegisterServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.IndexServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.EditProductServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.AssessOrderServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.AddCartServlet {
+- {static} long serialVersionUID
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.DeleteCategoryServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.SearchProductServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.AllOrderListServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.ProductListServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.UpdateUserInfoServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.DeleteOrderServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.UpdateCategoryServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.SubmitOrderServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.ConfirmOrderServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.DeleteProductServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.UpdateBuyNumServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.AccountServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.DeleteCartItemServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.AddCategoryServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+class com.gec.servlet.ProductInfoServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+
+
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.LogoutServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.OrderListServlet
+javax.servlet.http.HttpServlet <|-- com.gec.servlet.LoginServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.ManageOrderServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.CleanCartServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AddProductServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.CategoryListServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.EditCategoryServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.OrderInfoServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.RegisterServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.IndexServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.EditProductServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AssessOrderServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AddCartServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.DeleteCategoryServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.SearchProductServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AllOrderListServlet
+javax.servlet.http.HttpServlet <|-- com.gec.servlet.ProductListServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.UpdateUserInfoServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.DeleteOrderServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.UpdateCategoryServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.SubmitOrderServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.ConfirmOrderServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.DeleteProductServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.UpdateBuyNumServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AccountServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.DeleteCartItemServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AddCategoryServlet
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.ProductInfoServlet
+@enduml

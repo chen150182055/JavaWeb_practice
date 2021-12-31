@@ -1,0 +1,9 @@
+@startuml
+class com.gec.servlet.AddProductServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+
+
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AddProductServlet
+@enduml

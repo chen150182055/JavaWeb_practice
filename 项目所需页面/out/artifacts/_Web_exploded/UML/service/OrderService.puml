@@ -1,0 +1,11 @@
+@startuml
+class com.gec.service.OrderService {
+~ OrderDao orderDao
+- OrderItemDao orderItemDao
++ Order creatOrder(User,Cart)
++ List<Order> getAllOrderList()
++ Order getOrderByOid(String)
++ int assessOrder(String,String)
++ int updateOrderState(String)
+}
+@enduml

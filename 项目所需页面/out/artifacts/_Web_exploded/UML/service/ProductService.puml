@@ -1,0 +1,12 @@
+@startuml
+class com.gec.service.ProductService {
+~ ProductDao productDao
++ Map<String,List<Product>> findProduct()
++ List<Product> getProductList()
++ List<Product> getProductListByCid(String)
++ Product getProductById(String)
++ int deleteProductByPid(String)
++ int updateProduct(Product)
++ int addProduct(Product)
+}
+@enduml

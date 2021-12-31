@@ -1,0 +1,9 @@
+@startuml
+class com.gec.servlet.AllOrderListServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+
+
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AllOrderListServlet
+@enduml

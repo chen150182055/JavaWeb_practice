@@ -1,0 +1,6 @@
+@startuml
+class com.gec.service.CategoryService {
+- CategoryDao categoryDao
++ List<Category> getCategoryList()
+}
+@enduml

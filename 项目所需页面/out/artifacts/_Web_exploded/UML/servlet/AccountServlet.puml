@@ -1,0 +1,9 @@
+@startuml
+class com.gec.servlet.AccountServlet {
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+
+
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AccountServlet
+@enduml

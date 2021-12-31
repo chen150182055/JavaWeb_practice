@@ -1,0 +1,10 @@
+@startuml
+class com.gec.servlet.AddCartServlet {
+- {static} long serialVersionUID
+# void doGet(HttpServletRequest,HttpServletResponse)
+# void doPost(HttpServletRequest,HttpServletResponse)
+}
+
+
+com.gec.servlet.HttpServlet <|-- com.gec.servlet.AddCartServlet
+@enduml
