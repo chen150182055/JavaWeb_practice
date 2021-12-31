@@ -1,11 +1,11 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<HTML>
-<HEAD>
+<html>
+<head>
     <meta http-equiv="Content-Language" content="zh-cn">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <LINK href="${pageContext.request.contextPath}/css/Style1.css" type="text/css" rel="stylesheet">
-</HEAD>
+</head>
 
 <body>
 <!--  -->
@@ -119,4 +119,4 @@
     </table>
 </form>
 </body>
-</HTML>
+</html>

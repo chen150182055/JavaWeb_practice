@@ -9,7 +9,7 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.*;
 
-//确定订单
+//确定订单(基本订单)
 public class ConfirmOrderServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

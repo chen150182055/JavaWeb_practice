@@ -33,7 +33,7 @@
             <table class="table table-bordered">
                 <tbody>
                 <tr class="warning">
-                    <th colspan="5">订单编号:${order.oid}</th>
+                    <th colspan="5">订单编号:${reorder.oid}</th>
                 </tr>
                 <tr class="warning">
                     <th>图片</th>
@@ -44,13 +44,24 @@
                 </tr>
                 <c:forEach items="${order.orderItems}" var="orderItem">
                     <tr class="active">
-                        <td width="60" width="40%"><input type="hidden" name="id"
-                                                          value="22"> <img src="${orderItem.product.pimage }" width="70"
-                                                                           height="60"></td>
-                        <td width="30%"><a target="_blank"> ${orderItem.product.pname }</a></td>
-                        <td width="20%">￥${orderItem.product.shop_price }</td>
-                        <td width="10%">${orderItem.count }</td>
-                        <td width="15%"><span class="subtotal">￥${orderItem.subtotal }</span></td>
+                        <td width="60" width="40%">         <!--  -->
+                            <input type="hidden" name="id" value="22">
+                            <img src="${orderItem.product.pimage }" width="70" height="60">
+                        </td>
+                        <td width="30%">            <!--  -->
+                            <a target="_blank">
+                                    ${orderItem.product.pname }
+                            </a>
+                        </td>
+                        <td width="20%">        <!--  -->
+                            ￥${orderItem.product.shop_price }
+                        </td>
+                        <td width="10%">        <!--  -->
+                                ${orderItem.count }
+                        </td>
+                        <td width="15%">        <!--  -->
+                            <span class="subtotal">￥${orderItem.subtotal }</span>
+                        </td>
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -61,27 +72,27 @@
         </div>
     </div>
     <div style="width:100%;text-align:center">
-        <div><label>地&nbsp;&nbsp;&nbsp;址</label>
-            <input type="text" disabled="disabled"
-                   placeholder="请输入收货地址" value="${order.address}">
+        <div>       <!--  -->
+            <label>地&nbsp;&nbsp;&nbsp;址</label>
+            <input type="text" disabled="disabled" placeholder="请输入收货地址" value="${order.address}">
         </div>
-        <div><label>收货人</label>
-            <input type="text" disabled="disabled"
-                   placeholder="请输收货人" value="${order.name}">
+        <div>       <!--  -->
+            <label>收货人</label>
+            <input type="text" disabled="disabled" placeholder="请输收货人" value="${order.name}">
         </div>
-        <div><label>电&nbsp;&nbsp;&nbsp;话</label>
-            <input type="text" disabled="disabled"
-                   placeholder="请输入联系方式" value="${order.telephone}">
+        <div>       <!--  -->
+            <label>电&nbsp;&nbsp;&nbsp;话</label>
+            <input type="text" disabled="disabled" placeholder="请输入联系方式" value="${order.telephone}">
         </div>
         <hr/>
-        <form action="AccountServlet" style="margin-top: 5px;text-align:center">
+        <form action="AccountServlet" style="margin-top: 5px;text-align:center">   <!-- 付款 -->
             <input type="hidden" name="oid" value="${order.oid}">
             <div>
                 <label>付款</label>
                 <div>
                     <input type="password" placeholder="请输入支付密码" name="password" width="100px">
                     <br>
-                    <c:if test="${!empty error}">
+                    <c:if test="${!empty error}">  <!-- -->
                         <font style="color:red;">${error}</font>
                     </c:if>
                 </div>

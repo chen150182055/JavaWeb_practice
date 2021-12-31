@@ -37,43 +37,53 @@
         <div style="margin: 0 auto; margin-top: 10px; width: 950px;text-align:center;">
             <strong>我的订单</strong>
             <table class="table table-bordered">
-                <c:forEach items="${orderList}" var="order">
+                <c:forEach items="${orderList}" var="order"> <!-- 将所有订单输出出来 -->
                     <tbody>
-                    <tr class="success">
+                    <tr class="success">  <!-- 表格第一行打印订单号 背景为绿色 -->
                         <th colspan="5">订单编号:${order.oid}</th>
                     </tr>
-                    <tr class="warning">
+                    <tr class="warning">    <!-- 表格第二行打印订单的说明 背景为淡黄色 -->
                         <th>图片</th>
                         <th>商品</th>
                         <th>价格</th>
                         <th>数量</th>
                         <th>小计</th>
                     </tr>
-                    <c:forEach items="${order.orderItems}" var="orderItem">
-                        <tr class="active">
-                            <td width="60" width="40%"><input type="hidden" name="id"
-                                                              value="22"> <img src="${orderItem.product.pimage}"
-                                                                               width="70"
-                                                                               height="60"></td>
-                            <td width="30%"><a target="_blank">${orderItem.product.pname}</a></td>
-                            <td width="15%">￥${orderItem.product.shop_price}</td>
-                            <td width="15%">${orderItem.count}</td>
-                            <td width="15%"><span class="subtotal">￥${orderItem.subtotal}</span></td>
+                    <c:forEach items="${order.orderItems}" var="orderItem"> <!-- 输出单个订单项的具体 -->
+                        <tr class="active">   <!-- 表格第三行打印订单相应的具体信息 背景为灰色 -->
+                            <td width="60" width="40%">   <!-- 订单图片显示 -->
+                                <input type="hidden" name="id" value="22">
+                                <img src="${orderItem.product.pimage}" width="70" height="60">
+                            </td>
+                            <td width="30%">   <!-- 商品名显示 -->
+                                <a target="_blank">
+                                        ${orderItem.product.pname}
+                                </a>
+                            </td>
+                            <td width="15%">   <!-- 商品价格 -->
+                                ￥${orderItem.product.shop_price}
+                            </td>
+                            <td width="15%">    <!-- 购买数量 -->
+                                    ${orderItem.count}
+                            </td>
+                            <td width="15%">    <!-- 小计 -->
+                                <span class="subtotal">￥${orderItem.subtotal}</span>
+                            </td>
                         </tr>
                     </c:forEach>
-                    <tr>
+                    <tr>    <!-- 订单第四行 输出相关的订单状态信息 -->
                         <td>合计:&nbsp;&nbsp;<font style="color:red">￥${order.total}</font></td>
                         <td>${order.orderTime}</td>
                         <td>操作</td>
                         <td>
                             <a href="ManageOrderServlet?state=${order.state}&oid=${order.oid}">
-                                <c:if test="${order.state==0}">去付款</c:if>
-                                <c:if test="${order.state==1}">催单</c:if>
-                                <c:if test="${order.state==2}">确定收货</c:if>
-                                <c:if test="${order.state==3}">去评价</c:if>
-                                <c:if test="${order.state==4}">查看订单详情</c:if>
+                                <c:if test="${order.state==0}">去付款</c:if>   <!-- 如果订单状态为0 -->
+                                <c:if test="${order.state==1}">催单</c:if>    <!-- 如果订单状态为1 -->
+                                <c:if test="${order.state==2}">确定收货</c:if>  <!-- 如果订单状态为2 -->
+                                <c:if test="${order.state==3}">去评价</c:if>   <!-- 如果订单状态为3 -->
+                                <c:if test="${order.state==4}">查看订单详情</c:if><!-- 如果订单状态为4 -->
                             </a></td>
-                        <td><c:if test="${order.state==4}">交易成功</c:if></td>
+                        <td><c:if test="${order.state==4}">交易成功</c:if></td> <!-- 如果订单状态为4 -->
                     </tr>
                     </tbody>
                 </c:forEach>
@@ -83,35 +93,53 @@
     <!--分页 -->
     <div style="width: 380px; margin: 0 auto; margin-top: 50px;">
         <ul class="pagination" style="text-align: center; margin-top: 10px;">
-            <c:if test="${currentPage==1}">
-                <li class="disabled"><a href="#" aria-label="Previous"><span
-                        aria-hidden="true">&laquo;</span></a></li>
+            <c:if test="${currentPage==1}"> <!-- 如果订单只有1页 -->
+                <li class="disabled">
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>     <!-- -->
+                    </a>
+                </li>
             </c:if>
-            <c:if test="${currentPage!=1}">
-                <li><a href="OrderListServlet?currentPage=${currentPage-1}" aria-label="Previous"><span
-                        aria-hidden="true">&laquo;</span></a></li>
-            </c:if>
-
-
-            <c:forEach begin="1" end="${totalPage}" var="pageNum">
-                <c:if test="${currentPage==pageNum}">
-                    <li class="active"><a href="OrderListServlet?currentPage=${pageNum}">${pageNum }</a></li>
-                </c:if>
-                <c:if test="${currentPage!=pageNum }">
-                    <li><a href="OrderListServlet?currentPage=${pageNum}">${pageNum}</a></li>
-                </c:if>
-            </c:forEach>
-
-            <c:if test="${currentPage!=totalPage}">
-                <li><a href="OrderListServlet?currentPage=${currentPage+1}" aria-label="Next"> <span aria-hidden="true">&raquo;</span>
-                </a>
+            <c:if test="${currentPage!=1}"> <!-- 如果订单页不止1页 -->
+                <li>
+                    <a href="OrderListServlet?currentPage=${currentPage-1}" aria-label="Previous">    <!-- 订单列表 -->
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
                 </li>
             </c:if>
 
 
-            <c:if test="${currentPage==totalPage}">
-                <li class="disabled"><a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span>
-                </a>
+            <c:forEach begin="1" end="${totalPage}" var="pageNum">  <!--  -->
+                <c:if test="${currentPage==pageNum}"> <!-- 如果当前页面为是最后一页 -->
+                    <li class="active">
+                        <a href="OrderListServlet?currentPage=${pageNum}">    <!--  -->
+                                ${pageNum }
+                        </a>
+                    </li>
+                </c:if>
+                <c:if test="${currentPage!=pageNum }"><!-- 如果当前页面不是最后一页 -->
+                    <li>
+                        <a href="OrderListServlet?currentPage=${pageNum}">  <!--  -->
+                                ${pageNum}
+                        </a>
+                    </li>
+                </c:if>
+            </c:forEach>
+
+            <c:if test="${currentPage!=totalPage}"> <!--  -->
+                <li>
+                    <a href="OrderListServlet?currentPage=${currentPage+1}" aria-label="Next">    <!-- -->
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </c:if>
+
+
+            <c:if test="${currentPage==totalPage}"> <!--  -->
+                <li class="disabled">
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span> <!--  -->
+                    </a>
                 </li>
             </c:if>
         </ul>

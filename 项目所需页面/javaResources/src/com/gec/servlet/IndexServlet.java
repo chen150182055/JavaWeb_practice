@@ -10,7 +10,7 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
 
-//页面首页
+//主页 热门商品和最新商品 （基本功能）
 public class IndexServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

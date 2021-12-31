@@ -12,10 +12,12 @@ public class DeleteOrderServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         String oid=request.getParameter("oid");  //获取名为oid的参数值
+        System.out.println(oid);
         //创建一个OrderDao对象
         OrderDao orderDao = new OrderDao();
         //通过该对象调用deleteOrderItemById删除
         orderDao.deleteOrderItemByOid(oid);
+        System.out.println(12);
 
         response.sendRedirect("OrderListServlet?currentPage=1");   //
     }

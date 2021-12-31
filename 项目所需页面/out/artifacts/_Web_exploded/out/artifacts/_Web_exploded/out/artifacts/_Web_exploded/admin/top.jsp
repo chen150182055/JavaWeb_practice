@@ -1,32 +1,34 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
 <html>
+<!-- 管理员主界面的头部栏目 -->
 <head>
     <meta http-equiv="Content-Language" content="zh-cn">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <style type="text/css">
-        BODY {
-            MARGIN: 0px;
-            BACKGROUND-COLOR: #ffffff
+        body {
+            margin: 0px;
+            background-color: #ffffff
         }
 
-        BODY {
-            FONT-SIZE: 12px;
-            COLOR: #000000
+        body {
+            font-size: 12px;
+            color: #000000
         }
 
-        TD {
-            FONT-SIZE: 12px;
-            COLOR: #000000
+        td {
+            font-size: 12px;
+            color: #000000
         }
 
-        TH {
-            FONT-SIZE: 12px;
-            COLOR: #000000
+        th {
+            font-size: 12px;
+            color: #000000
         }
     </style>
     <link href="${pageContext.request.contextPath}/css/Style1.css" rel="stylesheet" type="text/css">
-</HEAD>
+</head>
 <body>
+
 <table width="100%" height="70%" border="0" cellspacing="0" cellpadding="0">
     <tr>
         <td>
@@ -37,6 +39,7 @@
         </td>
     </tr>
 </table>
+
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
     <tr>
         <td height="30" valign="bottom" background="${pageContext.request.contextPath}/images/好日子.jpg">

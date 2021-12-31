@@ -8,7 +8,7 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.UUID;
 
-//实现注册
+//实现注册 (基本功能)
 public class RegisterServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

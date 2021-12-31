@@ -1,10 +1,10 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
-<HTML>
-<HEAD>
+<html>
+<head>
     <meta http-equiv="Content-Language" content="zh-cn">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <LINK href="${pageContext.request.contextPath}/css/Style1.css" type="text/css" rel="stylesheet">
-</HEAD>
+    <link href="${pageContext.request.contextPath}/css/Style1.css" type="text/css" rel="stylesheet">
+</head>
 
 <body>
 <form id="userAction_save_do" name="Form1" action="${pageContext.request.contextPath}/AddCategoryServlet" method="get">
@@ -16,7 +16,7 @@
             <td class="ta_01" align="center" bgColor="#afd1f3" colSpan="4"
                 height="26">
                 <strong>
-                    <STRONG>添加分类</STRONG>
+                    <strong>添加分类</strong>
                 </strong>
             </td>
         </tr>
@@ -37,15 +37,15 @@
                     &#30830;&#23450;
                 </button>
 
-                <FONT face="宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT>
+                <font face="宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
                 <button type="reset" value="重置" class="button_cancel">&#37325;&#32622;</button>
 
-                <FONT face="宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT>
-                <INPUT class="button_ok" type="button" onclick="history.go(-1)" value="返回"/>
+                <font face="宋体">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font>
+                <input class="button_ok" type="button" onclick="history.go(-1)" value="返回"/>
                 <span id="Label1"></span>
             </td>
         </tr>
     </table>
 </form>
 </body>
-</HTML>
+</html>

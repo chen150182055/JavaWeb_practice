@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-//订单列表
+//订单列表(基本功能)
 public class OrderListServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

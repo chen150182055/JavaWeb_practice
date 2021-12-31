@@ -11,7 +11,7 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.List;
 
-//处理用户订单状态
+//处理用户订单状态(admin)
 public class ManageOrderServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

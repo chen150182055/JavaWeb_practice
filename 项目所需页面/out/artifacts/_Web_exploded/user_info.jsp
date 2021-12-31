@@ -59,25 +59,25 @@
             <font>会员信息</font>USER REGISTER
             <form class="form-horizontal" style="margin-top: 5px;" action="UpdateUserInfoServlet" method="post">
                 <div class="form-group">    <!-- 用户名输入块 -->
-                    <input type="hidden" name="uid" value="${user.uid}"/>    <!--  -->
+                    <input type="hidden" name="uid" value="${sessionScope.user.uid}"/>    <!--  -->
                     <label for="username" class="col-sm-2 control-label">用户名</label>   <!-- 标签显示 -->
                     <div class="col-sm-6">
                         <input type="text" class="form-control" id="username" disabled="disabled" placeholder="请输入用户名"
-                               name="username" value="${user.username}">
+                               name="username" value="${sessionScope.user.username}">
                     </div>
                 </div>      <!-- 密码输入块 -->
                 <div class="form-group">
                     <label for="Password" class="col-sm-2 control-label">密码</label>
                     <div class="col-sm-6">
                         <input type="password" class="form-control" id="Password" placeholder="请输入密码" name="password"
-                               value="${user.password}">
+                               value="${sessionScope.user.password}">
                     </div>
                 </div>      <!-- 确认密码输入块 -->
                 <div class="form-group">
                     <label for="confirmpwd" class="col-sm-2 control-label">确认密码</label>
                     <div class="col-sm-6">
                         <input type="password" class="form-control" id="confirmpwd" placeholder="请输入确认密码"
-                               value="${user.password}">
+                               value="${sessionScope.user.password}">
                         <font id="error" style="color:red;display:none">两个密码不一致，请确认后重新输入</font>
                     </div>
                 </div>
@@ -85,21 +85,21 @@
                     <label for="usercaption" class="col-sm-2 control-label">姓名</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" id="usercaption" placeholder="请输入姓名" name="name"
-                               value="${user.name}">
+                               value="${sessionScope.user.name}">
                     </div>
                 </div>
                 <div class="form-group">    <!-- Email输入块 -->
                     <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
                     <div class="col-sm-6">
                         <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email"
-                               value="${user.email }">
+                               value="${sessionScope.user.email }">
                     </div>
                 </div>
                 <div class="form-group">  <!-- 手机号码输入块 -->
                     <label for="inputEmail4" class="col-sm-2 control-label">手机号码</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" id="inputEmail4" placeholder="请输入手机号码" name="telephone"
-                               value="${user.telephone}">
+                               value="${sessionScope.user.telephone}">
                     </div>
                 </div>
                 <div class="form-group opt">     <!-- 性别复选框输入 -->
@@ -107,10 +107,10 @@
                     <div class="col-sm-6">
                         <label class="radio-inline">
                             <input type="radio" name="sex" id="inlineRadio1" value="男"
-                                   <c:if test="${user.sex=='男'}">checked="checked"</c:if>
+                                   <c:if test="${sessionScope.user.sex=='男'}">checked="checked"</c:if>
                             >男</label> <label class="radio-inline">  <!-- "男" 复选框 -->
                         <input type="radio" name="sex" id="inlineRadio2" value="女"
-                               <c:if test="${user.sex=='女'}">checked="checked"</c:if>
+                               <c:if test="${sessionScope.user.sex=='女'}">checked="checked"</c:if>
                         >女   <!-- "女"复选框 -->
                     </label>
                     </div>
@@ -118,14 +118,14 @@
                 <div class="form-group">    <!-- 出生日期输入块 -->
                     <label for="date" class="col-sm-2 control-label">出生日期</label>
                     <div class="col-sm-6">
-                        <input type="date" class="form-control" id="date" name="birthday" value="${user.birthday}">
+                        <input type="date" class="form-control" id="date" name="birthday" value="${sessionScope.user.birthday}">
                     </div>
                 </div>
                 <div class="form-group">    <!-- 地址输入块 -->
                     <label for="inputAddress6" class="col-sm-2 control-label">地址</label>
                     <div class="col-sm-6">
                         <input type="text" class="form-control" id="inputAddress6"
-                               placeholder="请输入常用收货地址" name="address" value="${user.address}">
+                               placeholder="请输入常用收货地址" name="address" value="${sessionScope.user.address}">
                     </div>
                 </div>
                 <div class="form-group">    <!-- 修改按钮和返回按钮 -->

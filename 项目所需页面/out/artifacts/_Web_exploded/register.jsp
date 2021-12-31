@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+                    <label for="Password" class="col-sm-2 control-label">密码</label>
                     <div class="col-sm-6">
                         <input type="password" class="form-control" id="Password"
                                placeholder="请输入密码" name="password">
@@ -84,48 +84,45 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="usercaption" class="col-sm-2 control-label">姓名</label>
+                    <label for="name" class="col-sm-2 control-label">姓名</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="usercaption"
+                        <input type="text" class="form-control" id="name"
                                placeholder="请输入姓名" name="name">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                    <label for="email" class="col-sm-2 control-label">Email</label>
                     <div class="col-sm-6">
-                        <input type="email" class="form-control" id="inputEmail3"
+                        <input type="email" class="form-control" id="email"
                                placeholder="Email" name="email">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">手机号码</label>
+                    <label for="telephone" class="col-sm-2 control-label">手机号码</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="inputEmail4"
+                        <input type="text" class="form-control" id="telephone"
                                placeholder="请输入手机号码" name="telephone">
                     </div>
                 </div>
                 <div class="form-group opt">
                     <label for="inlineRadio1" class="col-sm-2 control-label">性别</label>
                     <div class="col-sm-6">
-                        <label class="radio-inline"> <input type="radio"
-                                                            name="sex" id="inlineRadio1" value="男">
-                            男
-                        </label> <label class="radio-inline"> <input type="radio"
-                                                                     name="sex" id="inlineRadio2" value="女">
-                        女
-                    </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="sex" id="inlineRadio1" value="男">男</label>
+                        <label class="radio-inline">
+                            <input type="radio" name="sex" id="inlineRadio2" value="女">女</label>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="date" class="col-sm-2 control-label">出生日期</label>
+                    <label for="birthday" class="col-sm-2 control-label">出生日期</label>
                     <div class="col-sm-6">
-                        <input type="date" class="form-control" name="birthday">
+                        <input type="date" class="form-control" name="birthday" id="birthday">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="date" class="col-sm-2 control-label">地址</label>
+                    <label for="address" class="col-sm-2 control-label">地址</label>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="address">
+                        <input type="text" class="form-control" name="address" id = "address">
                     </div>
                 </div>
 

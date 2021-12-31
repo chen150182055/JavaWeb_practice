@@ -36,7 +36,7 @@
 <jsp:include page="/header.jsp"></jsp:include>
 
 <div class="container">
-    <c:if test="${empty cart}">
+    <c:if test="${empty cart}">    <!-- 利用JSTL判断 购物车cart是否为空 -->
         <div style="text-align:center">
             <img alt="" src="images/购物车空了.jpg"><br><br>
             <a href="Index">赶紧去购物</a>

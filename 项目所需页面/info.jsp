@@ -2,7 +2,7 @@
          pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
-
+<!-- 惠多多商城信息 -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>惠多多商城信息展示</title>

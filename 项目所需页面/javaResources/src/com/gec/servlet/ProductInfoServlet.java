@@ -7,7 +7,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.IOException;
 
-//获取商品页信息
+//获取商品页信息（基本功能）
 public class ProductInfoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

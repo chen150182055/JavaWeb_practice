@@ -13,6 +13,13 @@ import java.util.UUID;
 public class AddProductServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        /**
+         * 业务逻辑：
+         * 1.先获取request中的响应属性值
+         * 2.创建对象封装值
+         * 3.调用dao层操作底层数据库
+         * 4.重定向或者转发
+         */
         //getParameter()用于单个值的读取 参数多为表单中控件的name属性
         String pname = request.getParameter("pname");  //获取产品名
         String s = request.getParameter("is_hot");     //获取是否是热门商品

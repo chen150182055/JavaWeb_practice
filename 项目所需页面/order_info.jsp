@@ -63,25 +63,24 @@
     </div>
     <div>
         <hr/>
-        <form class="form-horizontal" action="QueDingOrderServlet"
-              style="margin-top: 5px; margin-left: 250px;">
+        <form class="form-horizontal" action="QueDingOrderServlet" style="margin-top: 5px; margin-left: 250px;">
             <input type="hidden" name="oid" value="${order.oid}">
             <div class="form-group">
-                <label for="username" class="col-sm-1 control-label">地&nbsp;&nbsp;&nbsp;址</label>
+                <label for="address" class="col-sm-1 control-label">地&nbsp;&nbsp;&nbsp;址</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="address" placeholder="请输入收货地址" value="${order.address}">
+                    <input type="text" class="form-control" name="address" id="address" placeholder="请输入收货地址" value="${order.address}">
                 </div>
             </div>
             <div class="form-group">
-                <label for="inputPassword3" class="col-sm-1 control-label">收货人</label>
+                <label for="name" class="col-sm-1 control-label">收货人</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="name" placeholder="请输收货人" value="${order.name}">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="请输收货人" value="${order.name}">
                 </div>
             </div>
             <div class="form-group">
-                <label for="confirmpwd" class="col-sm-1 control-label">电&nbsp;&nbsp;&nbsp;话</label>
+                <label for="telephone" class="col-sm-1 control-label">电&nbsp;&nbsp;&nbsp;话</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" name="telephone" placeholder="请输入联系方式" value="${order.telephone}">
+                    <input type="text" class="form-control" name="telephone" id="telephone" placeholder="请输入联系方式" value="${order.telephone}">
                 </div>
             </div>
             <input type="submit" value="确定订单" style="margin-left:150px">

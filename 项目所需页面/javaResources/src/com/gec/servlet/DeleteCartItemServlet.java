@@ -8,7 +8,7 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.util.Map;
 
-//删除购物车项
+//删除购物车项(基本功能)
 public class DeleteCartItemServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {

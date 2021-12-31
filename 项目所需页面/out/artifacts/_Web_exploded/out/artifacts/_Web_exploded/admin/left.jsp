@@ -1,5 +1,6 @@
 <%@ page language="java" pageEncoding="UTF-8" %>
 <html>
+<!-- 管理员主界面左边栏 -->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <title>菜单</title>
@@ -7,11 +8,13 @@
     <link rel="StyleSheet" href="${pageContext.request.contextPath}/css/dtree.css" type="text/css"/>
 </head>
 <body>
+
 <table width="100" border="0" cellspacing="0" cellpadding="0">
     <tr>
         <td height="12"></td>
     </tr>
 </table>
+
 <table width="100%" border="0">
     <tr>
         <td>
@@ -22,7 +25,7 @@
                     d = new dTree('d');
                     d.add('01', -1, '系统菜单树');
                     d.add('0102', '01', '分类管理', '', '', 'mainFrame');
-                    d.add('010201', '0102', '分类管理', '${pageContext.request.contextPath}/C11ategoryListServlet', '', 'mainFrame');
+                    d.add('010201', '0102', '分类管理', '${pageContext.request.contextPath}/CategoryListServlet', '', 'mainFrame');
                     d.add('0104', '01', '商品管理');
                     d.add('010401', '0104', '商品管理', '${pageContext.request.contextPath}/ProductListServlet?admin=admin&currentPage=1', '', 'mainFrame');
                     d.add('0106', '01', '订单管理');

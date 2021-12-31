@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-//登录实现
+//登录实现（基本功能）
 public class LoginServlet extends HttpServlet {
 
     UserService userService = new UserService();
